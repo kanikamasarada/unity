@@ -3,25 +3,22 @@ using UnityEngine.UI;
 
 public class UICrosshair : MonoBehaviour
 {
-    public RawImage crosshairImage;    // Inspector‚ÅRawImage‚ğƒZƒbƒg
+    public RawImage crosshairImage;    // Inspectorï¿½ï¿½RawImageï¿½ï¿½ï¿½Zï¿½bï¿½g
     [Range(2, 32)]
-    public int textureSize = 8;        // ‰~Œ`ƒeƒNƒXƒ`ƒƒ‚Ì‰ğ‘œ“x
+    public int textureSize = 8;        // ï¿½~ï¿½`ï¿½eï¿½Nï¿½Xï¿½`ï¿½ï¿½ï¿½Ì‰ğ‘œ“x
     public Color crosshairColor = Color.white;
 
     void Start()
     {
-        // ‰~Œ`ƒeƒNƒXƒ`ƒƒ‚ğ¶¬‚µ‚Ä RawImage ‚Éİ’è
+        // ï¿½~ï¿½`ï¿½eï¿½Nï¿½Xï¿½`ï¿½ï¿½ï¿½ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ RawImage ï¿½Éİ’ï¿½
         Texture2D tex = CreateCircleTexture(textureSize, crosshairColor);
         crosshairImage.texture = tex;
-
-        // FPS—pFƒJ[ƒ\ƒ‹‚ğ”ñ•\¦
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    /// <summary>
-    /// ’†S‚ª‰~Œ`A”wŒi“§–¾‚Ì Texture2D ‚ğ¶¬
-    /// </summary>
+ 
     private Texture2D CreateCircleTexture(int size, Color color)
     {
         Texture2D tex = new Texture2D(size, size, TextureFormat.RGBA32, false);
