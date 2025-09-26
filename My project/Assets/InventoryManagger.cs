@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -32,5 +33,10 @@ public class InventoryManager : MonoBehaviour
         {
             slots[index].SetItem(null);
         }
+    }
+
+    internal void AddItem(Interactable item)
+    {
+        throw new NotImplementedException();
     }
 }

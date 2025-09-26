@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PlayerInteract.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\PlayerInteract.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerInteract.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\PlayerInteract.cs",
+              "RelativeToolTip": "Assets\\PlayerInteract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:58:04.068Z",
+              "WhenOpened": "2025-09-26T01:45:12.256Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MouseLook.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\MouseLook.cs",
-              "RelativeDocumentMoniker": "Assets\\MouseLook.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\MouseLook.cs",
-              "RelativeToolTip": "Assets\\MouseLook.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:57:50.58Z"
             }
           ]
         }
