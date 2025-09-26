@@ -1,14 +1,12 @@
-// Interactable.cs
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public string itemName;
-    public GameObject prefab;   // ”z’u‚É¶¬‚·‚éŒ³
+    public Item item;  // ã“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ç´ã¥ãã‚¢ã‚¤ãƒ†ãƒ 
 
     public void OnInteract()
     {
-        // ‚±‚±‚Å‚Í”ñ•\¦‚É‚µ‚ÄInventory‚É“n‚·‚¾‚¯
-        gameObject.SetActive(false);
+        // æ‹¾ã£ãŸã‚‰ã‚²ãƒ¼ãƒ å†…ã‹ã‚‰æ¶ˆã™
+        Destroy(gameObject);
     }
 }

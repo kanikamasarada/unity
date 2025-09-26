@@ -7,18 +7,22 @@ public class PlayerInteract : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
     public InventoryManager inventory;
 
-    void Update()   // ✅ 引数なし
+    void Update()
     {
         if (Input.GetKeyDown(interactKey))
         {
+            Debug.Log("E pressed"); // ← デバッグ確認用
+
             Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
             if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
             {
-                var item = hit.collider.GetComponent<Interactable>();
-                if (item != null)
+                Debug.Log("Hit: " + hit.collider.name);
+
+                var interactable = hit.collider.GetComponent<Interactable>();
+                if (interactable != null && interactable.item != null)
                 {
-                    inventory.AddItem(item);
-                    item.OnInteract();
+                    inventory.AddItem(interactable.item);
+                    interactable.OnInteract();
                 }
             }
         }
