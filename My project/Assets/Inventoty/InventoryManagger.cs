@@ -1,26 +1,40 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Transform slotParent;   // InventoryPanel の子にある ItemSlot 群
-    private ItemSlot[] slots;
+    public static InventoryManager instance;
 
-    void Start()
+    public Transform slotsParent;
+    public GameObject slotPrefab;
+
+    public Image detailIcon;      // 右上の白い画像
+    public TMP_Text detailName;   // "raita-"のテキスト
+    public TMP_Text detailDesc;   // アイテム説明テキスト
+
+    private void Awake()
     {
-        slots = slotParent.GetComponentsInChildren<ItemSlot>();
+        instance = this;
     }
 
-    public void AddItem(Item newItem)
+    public void AddItem(Item item)
     {
-        foreach (var slot in slots)
+        foreach (Transform child in slotsParent)
         {
-            if (slot.GetItem() == null)
+            InventorySlot slot = child.GetComponent<InventorySlot>();
+            if (slot != null && slot.icon.sprite == null)
             {
-                slot.SetItem(newItem);
-                Debug.Log(newItem.itemName + " を追加しました");
+                slot.AddItem(item);
                 return;
             }
         }
-        Debug.Log("インベントリがいっぱい！");
+    }
+
+    public void ShowItemDetail(Item item)
+    {
+        detailIcon.sprite = item.icon;
+        detailName.text = item.itemName;
+        detailDesc.text = item.description;
     }
 }

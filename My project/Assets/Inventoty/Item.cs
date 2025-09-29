@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
+public class Item : ScriptableObject
 {
-    public string itemName;   // アイテムの名前
-    public Sprite icon;       // インベントリに表示するアイコン
+    public string itemName;
+    public Sprite icon;
+
+    [TextArea]   // ← 説明文を複数行で書ける
+    public string description;
 }
