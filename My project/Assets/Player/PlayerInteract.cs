@@ -2,27 +2,34 @@
 
 public class PlayerInteract : MonoBehaviour
 {
-    public Camera playerCam;
-    public float interactDistance = 3f;
-    public KeyCode interactKey = KeyCode.E;
-    public InventoryManager inventory;
+    public float interactRange = 3f;
+    public Camera cam;
+
+    void Start()
+    {
+        if (cam == null)
+        {
+            cam = Camera.main;
+        }
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(interactKey))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E pressed"); // ← デバッグ確認用
-
-            Ray ray = new Ray(playerCam.transform.position, playerCam.transform.forward);
-            if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
+            Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+            if (Physics.Raycast(ray, out RaycastHit hit, interactRange))
             {
                 Debug.Log("Hit: " + hit.collider.name);
 
-                var interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null && interactable.item != null)
+                ItemPickUp pickUp = hit.collider.GetComponent<ItemPickUp>();
+                if (pickUp != null)
                 {
-                    inventory.AddItem(interactable.item);
-                    interactable.OnInteract();
+                    Debug.Log("Item Picked Up: " + pickUp.item.itemName);
+                    InventoryManager.instance.AddItem(pickUp.item);
+
+                    // アイテム本体だけ消す
+                    Destroy(pickUp.gameObject);
                 }
             }
         }
