@@ -2,14 +2,29 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    // シングルトン参照
+    public static CameraControl Instance { get; private set; }
+
+    [Range(0f, 250f)]
+    public float mouseSensitivity = 50f;
+
     private float xRotation = 0f;
     private Transform playerBody;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        playerBody = transform.parent;  // 親をプレイヤー本体に
+        playerBody = transform.parent; // 親をプレイヤー本体に
     }
 
     void Update()

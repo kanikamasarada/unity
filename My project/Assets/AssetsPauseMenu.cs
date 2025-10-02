@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -7,10 +8,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject howToPlayPanel;
-    [SerializeField] private GameObject inventoryPanel; // インベントリパネル
+    [SerializeField] private GameObject inventoryPanel;
 
-    [Header("UI")]
+    [Header("UI - Sliders")]
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private TMP_Text volumeValueText;
+    [SerializeField] private Slider sensitivitySlider;
+    [SerializeField] private TMP_Text sensitivityValueText;
 
     [Header("Screen Mode Toggles")]
     [SerializeField] private Toggle fullscreenToggle;
@@ -20,21 +24,39 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
     private bool isInventoryOpen = false;
-
     public bool IsPaused => isPaused;
 
     void Start()
     {
-        // 音量初期化
+        // ===== 音量スライダー =====
         if (volumeSlider != null)
         {
             volumeSlider.minValue = 0f;
             volumeSlider.maxValue = 100f;
             volumeSlider.value = AudioListener.volume * 100f;
-            volumeSlider.onValueChanged.AddListener(v => AudioListener.volume = v / 100f);
+            UpdateVolumeText(volumeSlider.value);
+            volumeSlider.onValueChanged.AddListener(v =>
+            {
+                AudioListener.volume = v / 100f;
+                UpdateVolumeText(v);
+            });
         }
 
-        // ToggleGroup 設定
+        // ===== 感度スライダー =====
+        if (sensitivitySlider != null && CameraControl.Instance != null)
+        {
+            sensitivitySlider.minValue = 0f;
+            sensitivitySlider.maxValue = 250f;
+            sensitivitySlider.value = CameraControl.Instance.mouseSensitivity;
+            UpdateSensitivityText(sensitivitySlider.value);
+            sensitivitySlider.onValueChanged.AddListener(v =>
+            {
+                CameraControl.Instance.mouseSensitivity = v;
+                UpdateSensitivityText(v);
+            });
+        }
+
+        // ===== 画面モード初期化 =====
         if (screenModeGroup != null)
         {
             fullscreenToggle.group = screenModeGroup;
@@ -48,26 +70,22 @@ public class PauseMenu : MonoBehaviour
         windowedToggle.isOn = false;
         borderlessToggle.isOn = false;
 
-        // トグル変更イベント
         fullscreenToggle.onValueChanged.AddListener(on => { if (on) SetFullScreen(); });
         windowedToggle.onValueChanged.AddListener(on => { if (on) SetWindowed(); });
         borderlessToggle.onValueChanged.AddListener(on => { if (on) SetBorderless(); });
 
-        // パネル初期状態
+        // ===== パネル初期化 =====
         pauseMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
-
-        if (inventoryPanel != null)
-            inventoryPanel.SetActive(false);
+        if (inventoryPanel != null) inventoryPanel.SetActive(false);
     }
 
     void Update()
     {
-        // Escキー
+        // ===== Escキー処理 =====
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // インベントリ開いていたら閉じてメニュー表示
             if (isInventoryOpen)
             {
                 CloseInventory();
@@ -91,16 +109,13 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        // Tabキーでインベントリ開閉（ポーズ中は無効）
+        // ===== Tabキーでインベントリ開閉（ポーズ中は無効） =====
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (!isPaused) // メニュー中は無効
+            if (!isPaused && inventoryPanel != null)
             {
-                if (inventoryPanel != null)
-                {
-                    isInventoryOpen = !isInventoryOpen;
-                    inventoryPanel.SetActive(isInventoryOpen);
-                }
+                isInventoryOpen = !isInventoryOpen;
+                inventoryPanel.SetActive(isInventoryOpen);
             }
         }
     }
@@ -138,7 +153,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // ===== Settings =====
+    // ===== Settings Panel =====
     public void OpenSettings()
     {
         pauseMenuPanel.SetActive(false);
@@ -151,7 +166,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
-    // ===== How To Play =====
+    // ===== How To Play Panel =====
     public void OpenHowToPlay()
     {
         pauseMenuPanel.SetActive(false);
@@ -164,6 +179,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
+    // ===== Quit =====
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -190,5 +206,18 @@ public class PauseMenu : MonoBehaviour
     {
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         Screen.fullScreen = true;
+    }
+
+    // ===== スライダー値更新 =====
+    private void UpdateVolumeText(float value)
+    {
+        if (volumeValueText != null)
+            volumeValueText.text = $"{Mathf.RoundToInt(value)}";
+    }
+
+    private void UpdateSensitivityText(float value)
+    {
+        if (sensitivityValueText != null)
+            sensitivityValueText.text = $"{Mathf.RoundToInt(value)}";
     }
 }
