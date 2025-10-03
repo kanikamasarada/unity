@@ -2895,6 +2895,7 @@ GameObject:
   - component: {fileID: 893393130}
   - component: {fileID: 893393133}
   - component: {fileID: 893393131}
+  - component: {fileID: 893393134}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -2975,6 +2976,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893393129}
   m_CullTransparentMesh: 1
+--- !u!114 &893393134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893393129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58737e86b4461eb489abd341fa7a3e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2005202552}
 --- !u!1001 &942479487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3005,19 +3019,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -181.236
+      value: -180.216
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.4362843
+      value: 2.429
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99999315
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.003718095
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3029,7 +3043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.426
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5381912f22f2e044db439d7fe95c968d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4458,6 +4472,7 @@ GameObject:
   - component: {fileID: 1654948964}
   - component: {fileID: 1654948966}
   - component: {fileID: 1654948965}
+  - component: {fileID: 1654948967}
   m_Layer: 5
   m_Name: ItemDatailPanel
   m_TagString: Untagged
@@ -4525,6 +4540,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654948963}
   m_CullTransparentMesh: 1
+--- !u!114 &1654948967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654948963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761226a210ce1974f81b5585e9bc5890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 785381517}
+  itemName: {fileID: 2057651420}
+  itemDescription: {fileID: 1870256252}
 --- !u!1 &1695672801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4968,7 +4998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea15eac6a937ef43ba37a3a0a9a4118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 6daf540f7bcfc5d4da5f08ff87b8ff7c, type: 2}
+  item: {fileID: 11400000, guid: 38c09c4d0c976f442b1ddb2f98652ab2, type: 2}
 --- !u!1 &1766152430
 GameObject:
   m_ObjectHideFlags: 0
