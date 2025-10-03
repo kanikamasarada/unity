@@ -26,10 +26,16 @@ public class PlayerInteract : MonoBehaviour
                 if (pickUp != null)
                 {
                     Debug.Log("Item Picked Up: " + pickUp.item.itemName);
-                    InventoryManager.instance.AddItem(pickUp.item);
 
-                    // アイテム本体だけ消す
-                    Destroy(pickUp.gameObject);
+                    if (InventoryManager.instance != null)
+                    {
+                        InventoryManager.instance.AddItem(pickUp.item);
+                        Destroy(pickUp.gameObject); // アイテムをシーンから削除
+                    }
+                    else
+                    {
+                        Debug.LogWarning("InventoryManager.instance が見つかりません！");
+                    }
                 }
             }
         }
