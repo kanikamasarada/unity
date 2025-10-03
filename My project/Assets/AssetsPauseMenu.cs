@@ -108,17 +108,9 @@ public class PauseMenu : MonoBehaviour
                 ResumeGame();
             }
         }
-
-        // ===== Tabキーでインベントリ開閉（ポーズ中は無効） =====
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (!isPaused && inventoryPanel != null)
-            {
-                isInventoryOpen = !isInventoryOpen;
-                inventoryPanel.SetActive(isInventoryOpen);
-            }
-        }
     }
+
+       
 
     // ===== Pause / Resume =====
     public void PauseGame()

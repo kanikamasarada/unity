@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Item item;  // このオブジェクトに紐づくアイテム
+    public ItemData item;  // このオブジェクトに紐づくアイテム
 
     public void OnInteract()
     {
