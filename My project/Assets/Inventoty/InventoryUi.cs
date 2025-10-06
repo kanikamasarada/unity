@@ -4,23 +4,39 @@ using System.Collections.Generic;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Transform slotParent;   // スロットを並べる親 (Grid Layout Group 推奨)
-    public GameObject slotPrefab;  // スロットのプレハブ
+    public Transform itemSlotsParent;  // アイテムスロットを並べる親オブジェクト
+    public GameObject itemSlotPrefab;  // アイテムスロットのプレハブ
 
-    public void Refresh(List<ItemData> items)
+    private List<InventorySlotUI> slots = new List<InventorySlotUI>();
+
+    void Start()
     {
-        // 古いスロットを消す
-        foreach (Transform child in slotParent)
+        // すでにUIにスロットがある場合はリストに追加
+        foreach (Transform child in itemSlotsParent)
         {
-            Destroy(child.gameObject);
+            var slot = child.GetComponent<InventorySlotUI>();
+            if (slot != null)
+                slots.Add(slot);
+        }
+    }
+
+    // InventoryManager から呼び出される
+    public void AddItem(ItemData item)
+    {
+        // 空きスロットを探して追加
+        foreach (var slot in slots)
+        {
+            if (!slot.HasItem())
+            {
+                slot.SetItem(item);
+                return;
+            }
         }
 
-        // 新しいスロットを並べる
-        foreach (var item in items)
-        {
-            GameObject slot = Instantiate(slotPrefab, slotParent);
-            Image icon = slot.GetComponentInChildren<Image>();
-            icon.sprite = item.icon;
-        }
+        // 空きがなければ新規スロットを生成
+        GameObject newSlotObj = Instantiate(itemSlotPrefab, itemSlotsParent);
+        var newSlot = newSlotObj.GetComponent<InventorySlotUI>();
+        newSlot.SetItem(item);
+        slots.Add(newSlot);
     }
 }

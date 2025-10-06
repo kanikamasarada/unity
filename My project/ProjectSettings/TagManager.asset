@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - maincamera
+  - Item
   layers:
   - Default
   - TransparentFX
