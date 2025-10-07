@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     [Header("UI - Sliders")]
     [SerializeField] private Slider volumeSlider;
+    
     [SerializeField] private TMP_Text volumeValueText;
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private TMP_Text sensitivityValueText;

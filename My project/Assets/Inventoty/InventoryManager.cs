@@ -5,7 +5,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     public InventoryUI inventoryUI;
-    public GameObject escMenuPanel; // ← Escメニュー
+    public PauseMenu pauseMenu;  // ← PauseMenuスクリプト参照
     private bool isOpen = false;
 
     void Awake()
@@ -18,10 +18,11 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        // Escメニューが開いていたらインベントリを開けない
-        if (escMenuPanel != null && escMenuPanel.activeSelf)
+        // PauseMenu が開いてたら（isPaused = true）Tab 無効化
+        if (pauseMenu != null && pauseMenu.IsPaused)
             return;
 
+        // Tabキーでインベントリ開閉
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();

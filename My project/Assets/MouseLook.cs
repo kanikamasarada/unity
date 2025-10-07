@@ -2,40 +2,31 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    // ƒVƒ“ƒOƒ‹ƒgƒ“QÆ
-    public static CameraControl Instance { get; private set; }
-
-    [Range(0f, 250f)]
-    public float mouseSensitivity = 50f;
-
-    private float xRotation = 0f;
-    private Transform playerBody;
-
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-    }
+    public static CameraControl Instance;
+    public Transform playerBody;       // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼æœ¬ä½“
+    public float mouseSensitivity = 100f;
+    float xRotation = 0f;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        playerBody = transform.parent; // e‚ğƒvƒŒƒCƒ„[–{‘Ì‚É
+        Cursor.visible = false;
     }
 
     void Update()
     {
+        if (playerBody == null) return;
+
+        // ãƒã‚¦ã‚¹å…¥åŠ›ã®ã¿ã§å›è»¢
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
+        // ä¸Šä¸‹å›è»¢ï¼ˆã‚«ãƒ¡ãƒ©ï¼‰
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
+        // å·¦å³å›è»¢ï¼ˆãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼æœ¬ä½“ï¼‰
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }
