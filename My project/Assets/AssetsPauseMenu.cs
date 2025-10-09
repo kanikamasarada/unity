@@ -44,15 +44,15 @@ public class PauseMenu : MonoBehaviour
         }
 
         // ===== 感度スライダー =====
-        if (sensitivitySlider != null && CameraControl.Instance != null)
+        if (sensitivitySlider != null && MouseLook.Instance != null)
         {
             sensitivitySlider.minValue = 0f;
             sensitivitySlider.maxValue = 250f;
-            sensitivitySlider.value = CameraControl.Instance.mouseSensitivity;
+            sensitivitySlider.value = MouseLook.Instance.mouseSensitivity;
             UpdateSensitivityText(sensitivitySlider.value);
             sensitivitySlider.onValueChanged.AddListener(v =>
             {
-                CameraControl.Instance.mouseSensitivity = v;
+                MouseLook.Instance.mouseSensitivity = v;
                 UpdateSensitivityText(v);
             });
         }

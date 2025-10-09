@@ -1,24 +1,44 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    CharacterController controller;
-    public Transform playerBody; // Player の transform
+    public float moveSpeed = 5f;
+    public Transform cameraTransform;
+
+    private Rigidbody rb;
+    private float mouseX, mouseY;
+    private float xRotation = 0f;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        if (playerBody == null) playerBody = transform; // PlayerMovement が付いてるオブジェクトが Player の場合
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true; // 回転の暴走防止
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous; // すり抜け防止
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        // マウス操作
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
 
-        Vector3 move = playerBody.right * x + playerBody.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+
+        if (cameraTransform != null)
+            cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+        transform.Rotate(Vector3.up * mouseX);
+
+        // 移動入力
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * moveX + transform.forward * moveZ;
+        Vector3 velocity = new Vector3(move.x * moveSpeed, rb.linearVelocity.y, move.z * moveSpeed);
+        rb.linearVelocity = velocity;
     }
 }

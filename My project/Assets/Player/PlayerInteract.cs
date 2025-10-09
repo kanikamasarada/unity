@@ -2,19 +2,15 @@
 
 public class PlayerInteract : MonoBehaviour
 {
-    void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Item") && Input.GetKeyDown(KeyCode.E))
         {
-            // Eキーを押した瞬間だけ反応するように
-            if (Input.GetKeyDown(KeyCode.E))
+            ItemPickUp pickUp = other.GetComponent<ItemPickUp>();
+            if (pickUp != null)
             {
-                ItemPickUp pickUp = other.GetComponent<ItemPickUp>();
-                if (pickUp != null)
-                {
-                    InventoryManager.Instance.AddItem(pickUp.itemData);
-                    Destroy(other.gameObject);
-                }
+                InventoryManager.Instance.AddItem(pickUp.itemData);
+                Destroy(other.gameObject);
             }
         }
     }
