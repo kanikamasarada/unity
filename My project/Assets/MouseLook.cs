@@ -4,8 +4,10 @@ public class MouseLook : MonoBehaviour
 {
     public static MouseLook Instance;
     public float mouseSensitivity = 100f;
+    public Transform playerBody; // ← これが Player
     float xRotation = 0f;
-    float yRotation = 0f;
+
+    public bool isPaused = false; // ← PauseMenuから制御される
 
     void Awake()
     {
@@ -20,28 +22,21 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        // インベントリやポーズ中は止める
-        if (PauseMenuActive() || InventoryActive()) return;
+        // 一時停止・インベントリ中は動かさない
+        if (isPaused || InventoryActive()) return;
 
-        // マウス入力
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // カメラの上下
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // カメラの左右
-        yRotation += mouseX;
+        // 上下回転：カメラ
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // カメラを回転
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
-    }
-
-    bool PauseMenuActive()
-    {
-    var menu = FindFirstObjectByType<PauseMenu>();
-    return menu != null && menu.IsPaused;
+        // 左右回転：プレイヤー本体
+        if (playerBody != null)
+            playerBody.Rotate(Vector3.up * mouseX);
     }
 
     bool InventoryActive()

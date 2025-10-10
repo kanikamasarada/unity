@@ -12,7 +12,6 @@ public class PauseMenu : MonoBehaviour
 
     [Header("UI - Sliders")]
     [SerializeField] private Slider volumeSlider;
-    
     [SerializeField] private TMP_Text volumeValueText;
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private TMP_Text sensitivityValueText;
@@ -25,11 +24,12 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused = false;
     private bool isInventoryOpen = false;
+
     public bool IsPaused => isPaused;
 
-    void Start()
+    private void Start()
     {
-        // ===== 音量スライダー =====
+        // === 音量スライダー ===
         if (volumeSlider != null)
         {
             volumeSlider.minValue = 0f;
@@ -43,21 +43,31 @@ public class PauseMenu : MonoBehaviour
             });
         }
 
-        // ===== 感度スライダー =====
-        if (sensitivitySlider != null && MouseLook.Instance != null)
+        // === 感度スライダー ===
+        var mouseLook = MouseLook.Instance ?? FindFirstObjectByType<MouseLook>();
+        if (sensitivitySlider != null && mouseLook != null)
         {
             sensitivitySlider.minValue = 0f;
             sensitivitySlider.maxValue = 250f;
-            sensitivitySlider.value = MouseLook.Instance.mouseSensitivity;
+            sensitivitySlider.value = mouseLook.mouseSensitivity;
             UpdateSensitivityText(sensitivitySlider.value);
             sensitivitySlider.onValueChanged.AddListener(v =>
             {
-                MouseLook.Instance.mouseSensitivity = v;
+                // すべてのMouseLookに感度を反映
+                var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
+                foreach (var ml in allMouseLooks)
+                {
+                    ml.mouseSensitivity = v;
+                }
                 UpdateSensitivityText(v);
             });
         }
+        else
+        {
+            Debug.LogWarning("MouseLook コンポーネントが見つかりません。感度スライダーは無効です。");
+        }
 
-        // ===== 画面モード初期化 =====
+        // === 画面モード初期化 ===
         if (screenModeGroup != null)
         {
             fullscreenToggle.group = screenModeGroup;
@@ -75,16 +85,16 @@ public class PauseMenu : MonoBehaviour
         windowedToggle.onValueChanged.AddListener(on => { if (on) SetWindowed(); });
         borderlessToggle.onValueChanged.AddListener(on => { if (on) SetBorderless(); });
 
-        // ===== パネル初期化 =====
+        // === パネル初期化 ===
         pauseMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
         if (inventoryPanel != null) inventoryPanel.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
-        // ===== Escキー処理 =====
+        // === Escキー処理 ===
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isInventoryOpen)
@@ -111,32 +121,49 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-       
-
-    // ===== Pause / Resume =====
+    // === 一時停止 ===
     public void PauseGame()
     {
+        // すべての MouseLook を停止
+        var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
+        foreach (var ml in allMouseLooks)
+        {
+            ml.isPaused = true;   // ← MouseLook.cs のフラグで停止
+        }
+
         pauseMenuPanel.SetActive(true);
         settingsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
+
         Time.timeScale = 0f;
         isPaused = true;
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
+    // === 再開 ===
     public void ResumeGame()
     {
+        // すべての MouseLook を再開
+        var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
+        foreach (var ml in allMouseLooks)
+        {
+            ml.isPaused = false;  // ← 視点再開
+        }
+
         pauseMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
+
         Time.timeScale = 1f;
         isPaused = false;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // ===== Inventory =====
+    // === Inventory ===
     private void CloseInventory()
     {
         if (inventoryPanel != null)
@@ -146,7 +173,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // ===== Settings Panel =====
+    // === Settings ===
     public void OpenSettings()
     {
         pauseMenuPanel.SetActive(false);
@@ -159,7 +186,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
-    // ===== How To Play Panel =====
+    // === How To Play ===
     public void OpenHowToPlay()
     {
         pauseMenuPanel.SetActive(false);
@@ -172,7 +199,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
-    // ===== Quit =====
+    // === Quit ===
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -182,7 +209,7 @@ public class PauseMenu : MonoBehaviour
 #endif
     }
 
-    // ===== Screen Mode =====
+    // === Screen Mode ===
     private void SetFullScreen()
     {
         Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
@@ -201,7 +228,7 @@ public class PauseMenu : MonoBehaviour
         Screen.fullScreen = true;
     }
 
-    // ===== スライダー値更新 =====
+    // === スライダー値表示更新 ===
     private void UpdateVolumeText(float value)
     {
         if (volumeValueText != null)
