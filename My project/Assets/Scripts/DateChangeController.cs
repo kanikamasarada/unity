@@ -5,11 +5,11 @@ using System.Collections;
 
 public class DateChangeController : MonoBehaviour
 {
-    public Image fadeImage;           // •‚¢Image
-    public TextMeshProUGUI dateText;  // “ú•t•\¦Text
-    public float fadeDuration = 1f;   // ƒtƒF[ƒhŠÔ
+   public Image fadeImage;           // ï¿½ï¿½ï¿½ï¿½Image
+    public TextMeshProUGUI dateText;  // ï¿½ï¿½ï¿½tï¿½\ï¿½ï¿½Text
+    public float fadeDuration = 1f;   // ï¿½tï¿½Fï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½
 
-    // Q‚éƒ{ƒ^ƒ“‚©‚çŒÄ‚Î‚ê‚é
+    // ï¿½Qï¿½ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚Î‚ï¿½ï¿½
     public void ChangeDateWithFade()
     {
         StartCoroutine(FadeAndChangeDateRoutine());
@@ -17,21 +17,21 @@ public class DateChangeController : MonoBehaviour
 
     private IEnumerator FadeAndChangeDateRoutine()
     {
-        // ƒtƒF[ƒhƒAƒEƒg
+        // ï¿½tï¿½Fï¿½[ï¿½hï¿½Aï¿½Eï¿½g
         yield return StartCoroutine(Fade(0f, 1f));
 
-        // “ú•tXViOnDateChanged ”­‰Î ¨ DateObjectBehaviour •Ï‰»j
+        // ï¿½ï¿½ï¿½tï¿½Xï¿½Vï¿½iOnDateChanged ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ DateObjectBehaviour ï¿½Ï‰ï¿½ï¿½j
         GameDateManager.Instance.NextDay();
 
-        // “ú•t•\¦XV
+        // ï¿½ï¿½ï¿½tï¿½\ï¿½ï¿½ï¿½Xï¿½V
         int currentDay = GameDateManager.Instance.day;
-        dateText.text = currentDay + "“ú–Ú";
+        dateText.text = currentDay + "ï¿½ï¿½ï¿½ï¿½";
         dateText.enabled = true;
 
-        // 1•b•\¦
+        // 1ï¿½bï¿½\ï¿½ï¿½
         yield return new WaitForSeconds(1f);
 
-        // ƒtƒF[ƒhƒCƒ“
+        // ï¿½tï¿½Fï¿½[ï¿½hï¿½Cï¿½ï¿½
         yield return StartCoroutine(Fade(1f, 0f));
 
         dateText.enabled = false;

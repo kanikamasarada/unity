@@ -32,9 +32,10 @@ public class SleepUI : MonoBehaviour
 
     private void OnSleepClicked()
     {
-        Debug.Log("Q‚éƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½I");
-        // “ú•t•ÏX + ƒtƒF[ƒh + ƒIƒuƒWƒFƒNƒg•Ï‰»‚ğ‚Ü‚Æ‚ß‚ÄŒÄ‚Ô
+        Debug.Log("ï¿½Qï¿½ï¿½{ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½I");
+        // ï¿½ï¿½ï¿½tï¿½ÏX + ï¿½tï¿½Fï¿½[ï¿½h + ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½Ï‰ï¿½ï¿½ï¿½ï¿½Ü‚Æ‚ß‚ÄŒÄ‚ï¿½
         dateChanger.ChangeDateWithFade();
+        
 
         Hide();
     }
