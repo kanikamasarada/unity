@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Transform cameraTransform;
+    public float mouseSensitivity = 2f;
 
     private Rigidbody rb;
     private float mouseX, mouseY;
@@ -14,16 +15,35 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true; // 回転の暴走防止
-        rb.collisionDetectionMode = CollisionDetectionMode.Continuous; // すり抜け防止
-        Cursor.lockState = CursorLockMode.Locked;
+        rb.freezeRotation = true;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+        LockCursor(true); // ゲーム開始時はロック
     }
 
     void Update()
     {
-        // マウス操作
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        // ポーズメニューやスリープUIが開いてたら操作しない
+        var pauseMenu = FindFirstObjectByType<PauseMenu>();
+        var sleepUI = FindFirstObjectByType<SleepUI>();
+
+        bool uiActive = 
+            (pauseMenu != null && pauseMenu.IsPaused) ||
+            (sleepUI != null && sleepUI.panel.activeSelf);
+
+        if (uiActive)
+        {
+            LockCursor(false); // UIが開いてる間はカーソル解放
+            return;
+        }
+        else
+        {
+            LockCursor(true); // 通常プレイ中はロック
+        }
+
+        // --- カーソルロック後の操作 ---
+        mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -80f, 80f);
@@ -33,12 +53,25 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Rotate(Vector3.up * mouseX);
 
-        // 移動入力
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         Vector3 velocity = new Vector3(move.x * moveSpeed, rb.linearVelocity.y, move.z * moveSpeed);
         rb.linearVelocity = velocity;
+    }
+
+    private void LockCursor(bool locked)
+    {
+        if (locked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }

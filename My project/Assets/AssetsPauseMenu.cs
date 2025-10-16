@@ -53,7 +53,6 @@ public class PauseMenu : MonoBehaviour
             UpdateSensitivityText(sensitivitySlider.value);
             sensitivitySlider.onValueChanged.AddListener(v =>
             {
-                // すべてのMouseLookに感度を反映
                 var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
                 foreach (var ml in allMouseLooks)
                 {
@@ -75,7 +74,6 @@ public class PauseMenu : MonoBehaviour
             borderlessToggle.group = screenModeGroup;
         }
 
-        // デフォルトはフルスクリーン
         SetFullScreen();
         fullscreenToggle.isOn = true;
         windowedToggle.isOn = false;
@@ -85,7 +83,6 @@ public class PauseMenu : MonoBehaviour
         windowedToggle.onValueChanged.AddListener(on => { if (on) SetWindowed(); });
         borderlessToggle.onValueChanged.AddListener(on => { if (on) SetBorderless(); });
 
-        // === パネル初期化 ===
         pauseMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         howToPlayPanel.SetActive(false);
@@ -94,7 +91,6 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        // === Escキー処理 ===
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isInventoryOpen)
@@ -124,11 +120,17 @@ public class PauseMenu : MonoBehaviour
     // === 一時停止 ===
     public void PauseGame()
     {
-        // すべての MouseLook を停止
         var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
         foreach (var ml in allMouseLooks)
         {
-            ml.isPaused = true;   // ← MouseLook.cs のフラグで停止
+            ml.isPaused = true;
+        }
+
+        // ★追加: PlayerMovementも停止
+        var playerMove = FindFirstObjectByType<PlayerMovement>();
+        if (playerMove != null)
+        {
+            playerMove.enabled = false;
         }
 
         pauseMenuPanel.SetActive(true);
@@ -145,11 +147,17 @@ public class PauseMenu : MonoBehaviour
     // === 再開 ===
     public void ResumeGame()
     {
-        // すべての MouseLook を再開
         var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
         foreach (var ml in allMouseLooks)
         {
-            ml.isPaused = false;  // ← 視点再開
+            ml.isPaused = false;
+        }
+
+        // ★追加: PlayerMovementを再開
+        var playerMove = FindFirstObjectByType<PlayerMovement>();
+        if (playerMove != null)
+        {
+            playerMove.enabled = true;
         }
 
         pauseMenuPanel.SetActive(false);
@@ -163,7 +171,6 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
     }
 
-    // === Inventory ===
     private void CloseInventory()
     {
         if (inventoryPanel != null)
@@ -173,7 +180,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // === Settings ===
     public void OpenSettings()
     {
         pauseMenuPanel.SetActive(false);
@@ -186,7 +192,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
-    // === How To Play ===
     public void OpenHowToPlay()
     {
         pauseMenuPanel.SetActive(false);
@@ -199,7 +204,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
-    // === Quit ===
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -209,7 +213,6 @@ public class PauseMenu : MonoBehaviour
 #endif
     }
 
-    // === Screen Mode ===
     private void SetFullScreen()
     {
         Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
@@ -228,7 +231,6 @@ public class PauseMenu : MonoBehaviour
         Screen.fullScreen = true;
     }
 
-    // === スライダー値表示更新 ===
     private void UpdateVolumeText(float value)
     {
         if (volumeValueText != null)

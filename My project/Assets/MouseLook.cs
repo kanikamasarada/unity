@@ -3,11 +3,11 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     public static MouseLook Instance;
+    public Transform playerBody;
     public float mouseSensitivity = 100f;
-    public Transform playerBody; // ← これが Player
-    float xRotation = 0f;
 
-    public bool isPaused = false; // ← PauseMenuから制御される
+    private float xRotation = 0f;
+    [HideInInspector] public bool isPaused = false;
 
     void Awake()
     {
@@ -16,14 +16,22 @@ public class MouseLook : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // ❌ 削除：ここでカーソルロックするとUI操作できなくなる
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     void Update()
     {
-        // 一時停止・インベントリ中は動かさない
-        if (isPaused || InventoryActive()) return;
+        // UI中・ポーズ中は視点を動かさない
+        var pauseMenu = FindFirstObjectByType<PauseMenu>();
+        var sleepUI = FindFirstObjectByType<SleepUI>();
+
+        bool uiActive =
+            (pauseMenu != null && pauseMenu.IsPaused) ||
+            (sleepUI != null && sleepUI.panel.activeSelf);
+
+        if (uiActive || isPaused) return;
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -31,16 +39,7 @@ public class MouseLook : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        // 上下回転：カメラ
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        // 左右回転：プレイヤー本体
-        if (playerBody != null)
-            playerBody.Rotate(Vector3.up * mouseX);
-    }
-
-    bool InventoryActive()
-    {
-        return InventoryManager.Instance != null && InventoryManager.Instance.IsOpen();
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 }
