@@ -5,7 +5,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
 
     public InventoryUI inventoryUI;
-    public PauseMenu pauseMenu;  // ← PauseMenuスクリプト参照
+    public PauseMenu pauseMenu;
     private bool isOpen = false;
 
     void Awake()
@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        // PauseMenu が開いてたら（isPaused = true）Tab 無効化
+        // PauseMenu が開いていたら Tab 無効化
         if (pauseMenu != null && pauseMenu.IsPaused)
             return;
 
@@ -32,11 +32,31 @@ public class InventoryManager : MonoBehaviour
     public void ToggleInventory()
     {
         isOpen = !isOpen;
-        inventoryUI.gameObject.SetActive(isOpen);
+        if (inventoryUI != null)
+            inventoryUI.gameObject.SetActive(isOpen);
 
-        // 開いた時、マウスカーソルを出す
-        Cursor.visible = isOpen;
-        Cursor.lockState = isOpen ? CursorLockMode.None : CursorLockMode.Locked;
+        UpdateGamePauseState();
+    }
+
+    private void UpdateGamePauseState()
+    {
+        bool shouldPause = isOpen || (pauseMenu != null && pauseMenu.IsPaused);
+
+        // マウスカーソル
+        Cursor.visible = shouldPause;
+        Cursor.lockState = shouldPause ? CursorLockMode.None : CursorLockMode.Locked;
+
+        // 世界停止
+        Time.timeScale = shouldPause ? 0f : 1f;
+
+        // プレイヤー移動停止
+        var playerMove = FindFirstObjectByType<PlayerMovement>();
+        if (playerMove != null)
+            playerMove.enabled = !shouldPause;
+
+        var rb = FindFirstObjectByType<Rigidbody>();
+        if (rb != null)
+            rb.isKinematic = shouldPause;
     }
 
     public void AddItem(ItemData item)

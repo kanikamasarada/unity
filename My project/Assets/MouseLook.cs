@@ -3,6 +3,7 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     public static MouseLook Instance;
+
     public Transform playerBody;
     public float mouseSensitivity = 300f;
 
@@ -14,16 +15,12 @@ public class MouseLook : MonoBehaviour
         Instance = this;
     }
 
-    void Start()
-    {
-        // ❌ 削除：ここでカーソルロックするとUI操作できなくなる
-        // Cursor.lockState = CursorLockMode.Locked;
-        // Cursor.visible = false;
-    }
-
     void Update()
     {
-        // UI中・ポーズ中は視点を動かさない
+        // Inventoryが開いている場合は視点操作を止める
+        if (InventoryManager.Instance != null && InventoryManager.Instance.IsOpen())
+            return;
+
         var pauseMenu = FindFirstObjectByType<PauseMenu>();
         var sleepUI = FindFirstObjectByType<SleepUI>();
 
