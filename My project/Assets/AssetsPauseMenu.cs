@@ -48,7 +48,7 @@ public class PauseMenu : MonoBehaviour
         if (sensitivitySlider != null && mouseLook != null)
         {
             sensitivitySlider.minValue = 0f;
-            sensitivitySlider.maxValue = 250f;
+            sensitivitySlider.maxValue = 300f;
             sensitivitySlider.value = mouseLook.mouseSensitivity;
             UpdateSensitivityText(sensitivitySlider.value);
             sensitivitySlider.onValueChanged.AddListener(v =>

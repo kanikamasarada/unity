@@ -4,7 +4,7 @@ public class MouseLook : MonoBehaviour
 {
     public static MouseLook Instance;
     public Transform playerBody;
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 300f;
 
     private float xRotation = 0f;
     [HideInInspector] public bool isPaused = false;
