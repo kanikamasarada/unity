@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u4F1A\u8A71\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\walltexturechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +74,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueManager.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T02:24:43.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DialogueTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
+              "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T02:24:19.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TMP_Settings.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
@@ -78,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TMP_PackageResourceImporter.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
@@ -90,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MouseLook.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\MouseLook.cs",
               "RelativeDocumentMoniker": "Assets\\MouseLook.cs",
@@ -102,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AssetsPauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\AssetsPauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\AssetsPauseMenu.cs",
@@ -114,19 +147,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "TextMeshProUGUI.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
               "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
               "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
-              "ViewState": "AgIAAMgHAAAAAAAAAAAowNQHAABBAAAAAAAAAA==",
+              "ViewState": "AgIAALkHAAAAAAAAAAAYwNQHAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T00:32:31.232Z"
+              "WhenOpened": "2025-10-17T00:32:31.232Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "WallTextureChanger.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\WallTextureChanger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WallTextureChanger.cs",
@@ -138,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SleepUI.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\SleepUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SleepUI.cs",
@@ -150,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GameDateManager.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\GameDateManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameDateManager.cs",
@@ -162,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DayChangeData.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DayChangeData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DayChangeData.cs",
@@ -174,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "DateObjectBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
@@ -182,12 +216,11 @@
               "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAUwCUAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T04:42:14.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T04:42:14.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "DateChangeController.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DateChangeController.cs",
@@ -199,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Bed.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\Bed.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bed.cs",
