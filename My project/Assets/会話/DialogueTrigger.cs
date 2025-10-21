@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    private bool isTalking = false; // 会話中かどうか
+    public bool isTalking = false; // 会話中かどうか
 
     public List<DialogueLine> dialogueLines = new List<DialogueLine>()
     {
