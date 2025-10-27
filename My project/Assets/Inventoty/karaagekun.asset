@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
-  m_Name: kagi
+  m_Name: karaagekun
   m_EditorClassIdentifier: 
-  itemName: kagi
-  icon: {fileID: 21300000, guid: 46649bcc6f2ae5842bf0c83d4e619171, type: 3}
-  description: eeeee
-  worldPrefab: {fileID: 9000368826627040996, guid: b6fb12c2664806c468a576a65ba9aa89, type: 3}
-  worldRotationOffset: {x: 0, y: 0, z: 0}
-  worldPositionOffset: {x: 0, y: 0, z: 0}
+  itemName: karaagekun
+  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  description: saaa
+  worldPrefab: {fileID: 4549261384941375326, guid: 3d799a57f7329f643b24d8f5a050be4e, type: 3}
+  worldRotationOffset: {x: 180, y: 0, z: 90}
+  worldPositionOffset: {x: 2, y: 0, z: 0}
   worldScale: {x: 1, y: 1, z: 1}

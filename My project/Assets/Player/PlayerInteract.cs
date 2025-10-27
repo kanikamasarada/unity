@@ -2,16 +2,35 @@
 
 public class PlayerInteract : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    public float interactRange = 3f; // ← 前は1fとかなら広げる
+    public LayerMask itemLayer;
+    public Camera playerCamera;
+
+    private void Update()
     {
-        if (other.CompareTag("Item") && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            ItemPickUp pickUp = other.GetComponent<ItemPickUp>();
-            if (pickUp != null)
+            TryInteract();
+        }
+    }
+
+    void TryInteract()
+    {
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, interactRange, itemLayer))
+        {
+            var itemPickup = hit.collider.GetComponent<ItemPickUp>();
+            if (itemPickup != null)
             {
-                InventoryManager.Instance.AddItem(pickUp.itemData);
-                Destroy(other.gameObject);
+                itemPickup.PickUp();
             }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (playerCamera == null) return;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * interactRange);
     }
 }
