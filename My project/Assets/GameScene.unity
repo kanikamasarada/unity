@@ -9987,9 +9987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c106cc517417a4ca85a210c48e3e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   cameraTransform: {fileID: 429651283}
-  mouseSensitivity: 2
+  mouseSensitivity: 3
 --- !u!4 &1896227224
 Transform:
   m_ObjectHideFlags: 0
