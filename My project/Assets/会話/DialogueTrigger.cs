@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(Collider))]
 public class DialogueTrigger : MonoBehaviour
 {
-    public bool isTalking = false; // 会話中かどうか
-
+    public bool isTalking = false; // 会話中フラグ
+    public float talkDistance = 3f; // 会話可能距離
     public List<DialogueLine> dialogueLines = new List<DialogueLine>()
     {
         new DialogueLine("？？？", "……ここはどこだ？"),
@@ -12,34 +13,63 @@ public class DialogueTrigger : MonoBehaviour
         new DialogueLine("主人公", "……何かの気配がする。")
     };
 
+    private static DialogueTrigger currentTarget; // 現在見ている会話対象
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        DetectPlayerLooking();
+
+        if (Input.GetKeyDown(KeyCode.E) && currentTarget == this && !isTalking)
         {
-            var player = GameObject.FindWithTag("Player");
-            if (player == null) return;
+            StartDialogue();
+        }
+    }
 
-            float distance = Vector3.Distance(player.transform.position, transform.position);
+    /// <summary>
+    /// カメラ中心からレイを飛ばして「見ている対象」を取得
+    /// </summary>
+    void DetectPlayerLooking()
+    {
+        var player = GameObject.FindWithTag("Player");
+        if (player == null) return;
 
-            // 会話可能距離内 & 会話中でないときのみ開始
-            if (distance < 3f && !isTalking)
+        Camera cam = Camera.main;
+        if (cam == null) return;
+
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, talkDistance))
+        {
+            DialogueTrigger target = hit.collider.GetComponent<DialogueTrigger>();
+
+            if (target != null)
             {
-                StartDialogue();
+                currentTarget = target;
+                return;
             }
         }
+
+        // 何も見ていない場合リセット
+        if (currentTarget == this)
+            currentTarget = null;
     }
 
     void StartDialogue()
     {
         isTalking = true;
-
-        // 会話を開始
         DialogueManager.instance.ShowDialogue(dialogueLines, OnDialogueEnd);
+        Debug.Log($"Started dialogue with {gameObject.name}");
     }
 
-    // === 会話終了時に呼ばれる ===
     void OnDialogueEnd()
     {
         isTalking = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, talkDistance);
     }
 }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI; // ← Legacy Text用
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,19 +8,23 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
 
-    [Header("UI")]
+    [Header("UI (どちらかを使う)")]
     public GameObject dialoguePanel;
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
+
+    // TMP
+    public TextMeshProUGUI nameTextTMP;
+    public TextMeshProUGUI dialogueTextTMP;
+
+    // Legacy
+    public Text nameTextLegacy;
+    public Text dialogueTextLegacy;
 
     [Header("設定")]
     public float typeSpeed = 0.06f;
     public float autoCloseDelay = 3f;
 
     private bool isShowing = false;
-#pragma warning disable CS0414
-    private bool isTyping = false;
-#pragma warning restore CS0414
+    [System.NonSerialized] private bool isTyping;
 
     private Queue<DialogueLine> dialogueQueue = new Queue<DialogueLine>();
 
@@ -29,7 +34,8 @@ public class DialogueManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        dialoguePanel.SetActive(false);
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
     }
 
     // === 通常の呼び出し ===
@@ -54,9 +60,10 @@ public class DialogueManager : MonoBehaviour
 
         onDialogueEnd = onEnd; // コールバック登録
 
-        dialoguePanel.SetActive(true);
-        dialogueText.text = "";
-        nameText.text = "";
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(true);
+
+        ClearText();
         StartCoroutine(RunDialogue());
     }
 
@@ -69,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         {
             DialogueLine line = dialogueQueue.Dequeue();
 
-            nameText.text = line.speakerName;
+            SetNameText(line.speakerName);
             yield return StartCoroutine(TypeText(line.text));
 
             // Enterキー待ち
@@ -77,13 +84,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(autoCloseDelay);
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
-        nameText.text = "";
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
+
+        ClearText();
         isShowing = false;
         FreezePlayer(false);
 
-        // ★追加：会話終了後にコールバックを実行
         onDialogueEnd?.Invoke();
         onDialogueEnd = null;
     }
@@ -91,11 +98,11 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator TypeText(string text)
     {
         isTyping = true;
-        dialogueText.text = "";
+        SetDialogueText("");
 
         foreach (char c in text)
         {
-            dialogueText.text += c;
+            AppendDialogueText(c.ToString());
             yield return new WaitForSeconds(typeSpeed);
         }
 
@@ -113,8 +120,43 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = freeze ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = freeze;
     }
+
+    // ======== ここから共通処理 ========
+
+    private void SetNameText(string text)
+    {
+        if (nameTextTMP != null)
+            nameTextTMP.text = text;
+        if (nameTextLegacy != null)
+            nameTextLegacy.text = text;
+    }
+
+    private void SetDialogueText(string text)
+    {
+        if (dialogueTextTMP != null)
+            dialogueTextTMP.text = text;
+        if (dialogueTextLegacy != null)
+            dialogueTextLegacy.text = text;
+    }
+
+    private void AppendDialogueText(string text)
+    {
+        if (dialogueTextTMP != null)
+            dialogueTextTMP.text += text;
+        if (dialogueTextLegacy != null)
+            dialogueTextLegacy.text += text;
+    }
+
+    private void ClearText()
+    {
+        SetNameText("");
+        SetDialogueText("");
+    }
 }
 
+// ===========================================
+// 会話1行のデータ構造
+// ===========================================
 [System.Serializable]
 public class DialogueLine
 {

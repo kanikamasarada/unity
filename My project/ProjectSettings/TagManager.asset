@@ -6,6 +6,8 @@ TagManager:
   tags:
   - maincamera
   - Item
+  - NPC
+  - "\uFF1F"
   layers:
   - Default
   - TransparentFX

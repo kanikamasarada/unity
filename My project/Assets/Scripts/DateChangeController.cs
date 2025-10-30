@@ -5,11 +5,15 @@ using System.Collections;
 
 public class DateChangeController : MonoBehaviour
 {
-   public Image fadeImage;           // ����Image
-    public TextMeshProUGUI dateText;  // ���t�\��Text
-    public float fadeDuration = 1f;   // �t�F�[�h����
+    [Header("フェード設定")]
+    public Image fadeImage;           // フェード用Image
+    public float fadeDuration = 1f;   // フェード時間
 
-    // �Q��{�^������Ă΂��
+    [Header("日付テキスト（どちらか使用）")]
+    public TextMeshProUGUI dateText_TMP;  // TextMeshPro 用
+    public Text dateText_Legacy;          // レガシーUI用
+
+    // 日付変更を開始（ボタンなどから呼ぶ）
     public void ChangeDateWithFade()
     {
         StartCoroutine(FadeAndChangeDateRoutine());
@@ -17,24 +21,39 @@ public class DateChangeController : MonoBehaviour
 
     private IEnumerator FadeAndChangeDateRoutine()
     {
-        // �t�F�[�h�A�E�g
+        // フェードアウト
         yield return StartCoroutine(Fade(0f, 1f));
 
-        // ���t�X�V�iOnDateChanged ���� �� DateObjectBehaviour �ω��j
+        // 日付を進める
         GameDateManager.Instance.NextDay();
 
-        // ���t�\���X�V
+        // 現在の日付を取得して表示
         int currentDay = GameDateManager.Instance.day;
-        dateText.text = currentDay + "����";
-        dateText.enabled = true;
+        string displayText = currentDay + "日目";
 
-        // 1�b�\��
+        if (dateText_TMP != null)
+        {
+            dateText_TMP.text = displayText;
+            dateText_TMP.enabled = true;
+        }
+
+        if (dateText_Legacy != null)
+        {
+            dateText_Legacy.text = displayText;
+            dateText_Legacy.enabled = true;
+        }
+
+        // 1秒表示
         yield return new WaitForSeconds(1f);
 
-        // �t�F�[�h�C��
+        // フェードイン
         yield return StartCoroutine(Fade(1f, 0f));
 
-        dateText.enabled = false;
+        if (dateText_TMP != null)
+            dateText_TMP.enabled = false;
+
+        if (dateText_Legacy != null)
+            dateText_Legacy.enabled = false;
     }
 
     private IEnumerator Fade(float startAlpha, float endAlpha)

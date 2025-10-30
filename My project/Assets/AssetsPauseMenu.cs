@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement; // ★追加：シーン切り替えに必要
 
 public class PauseMenu : MonoBehaviour
 {
@@ -204,13 +205,15 @@ public class PauseMenu : MonoBehaviour
         pauseMenuPanel.SetActive(true);
     }
 
+    // === ★変更箇所：ゲーム終了 → タイトルシーンへ戻る ===
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        // タイトルシーン名をここで指定（例: "TitleScene"）
+        SceneManager.LoadScene("TitleScene");
     }
 
     private void SetFullScreen()
