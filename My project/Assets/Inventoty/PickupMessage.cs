@@ -48,7 +48,7 @@ public class PickupMessage : MonoBehaviour
 
     public void ShowMessage(string itemName)
     {
-        string displayText = $"{itemName} を手に入れた";
+        string displayText = $"{itemName}を手に入れた";
         timer = 0f;
 
         if (messageText_TMP != null)

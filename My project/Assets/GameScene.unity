@@ -180,8 +180,10 @@ MonoBehaviour:
   iconImage: {fileID: 340341969}
   button: {fileID: 6475442}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!114 &6475442 stripped
 MonoBehaviour:
@@ -1655,8 +1657,10 @@ MonoBehaviour:
   iconImage: {fileID: 1980864369}
   button: {fileID: 224720293}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!114 &224720293 stripped
 MonoBehaviour:
@@ -2064,7 +2068,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 33ab2765b8758904e9185244581046d1, type: 3}
-    m_FontSize: 36
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -2848,7 +2852,7 @@ Transform:
   m_GameObject: {fileID: 429651282}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7227,8 +7231,10 @@ MonoBehaviour:
   iconImage: {fileID: 441256570}
   button: {fileID: 869620792}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!114 &869620792 stripped
 MonoBehaviour:
@@ -7284,7 +7290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &874553061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7293,7 +7299,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874553060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7301,8 +7307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: -2}
-  m_SizeDelta: {x: -81, y: 50}
+  m_AnchoredPosition: {x: 220, y: -2}
+  m_SizeDelta: {x: 60.05, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874553062
 MonoBehaviour:
@@ -7316,7 +7322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7371,8 +7377,10 @@ MonoBehaviour:
   iconImage: {fileID: 1595339984}
   button: {fileID: 879743316}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!114 &879743316 stripped
 MonoBehaviour:
@@ -7421,8 +7429,10 @@ MonoBehaviour:
   iconImage: {fileID: 2005202552}
   button: {fileID: 893393131}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!1 &903805538 stripped
 GameObject:
@@ -10893,8 +10903,10 @@ MonoBehaviour:
   iconImage: {fileID: 1267458133}
   button: {fileID: 1348648063}
   currentItem: {fileID: 0}
-  itemNameText: {fileID: 2057651420}
-  itemDescText: {fileID: 1870256252}
+  itemNameText_TMP: {fileID: 0}
+  itemDescText_TMP: {fileID: 0}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!114 &1348648063 stripped
 MonoBehaviour:
@@ -12882,10 +12894,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 2005202552}
-  itemNameText_TMP: {fileID: 0}
-  itemDescText_TMP: {fileID: 0}
-  itemNameText_Legacy: {fileID: 874553062}
-  itemDescText_Legacy: {fileID: 1737637539}
+  itemNameText_TMP: {fileID: 2057651420}
+  itemDescText_TMP: {fileID: 1870256252}
+  itemNameText_Legacy: {fileID: 1737637539}
+  itemDescText_Legacy: {fileID: 874553062}
   equipButton: {fileID: 629720334}
 --- !u!1 &1657035320
 GameObject:
@@ -13827,7 +13839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1737637538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13874,7 +13886,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -14761,12 +14773,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ItemTextaaaaaaaaaaaaaaaaaaaaa
-
-'
+  m_text: "\u30A2\u30A4\u30C6\u30E0\u8AAC\u660E"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 52be5d0cbdf54ae4b8b8c7742e24a28f, type: 2}
+  m_sharedMaterial: {fileID: 1238397028176210991, guid: 52be5d0cbdf54ae4b8b8c7742e24a28f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15929,12 +15939,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '      raita-
-
-'
+  m_text: "\u78BA\u8A8D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 52be5d0cbdf54ae4b8b8c7742e24a28f, type: 2}
+  m_sharedMaterial: {fileID: 1238397028176210991, guid: 52be5d0cbdf54ae4b8b8c7742e24a28f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16034,8 +16042,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019999996, y: 0.0061900723, z: 0.020000001}
-  m_Center: {x: 1.6653345e-16, y: 8.5719734e-19, z: -0.000000007450581}
+  m_Size: {x: 0.019999996, y: 0.006190072, z: 0.00996214}
+  m_Center: {x: 1.6677662e-12, y: 0.0000000011637709, z: 0.0050189155}
 --- !u!1 &2065535874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6689616926677415937, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}

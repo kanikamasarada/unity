@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e9326451615fa8c40ae70e111b90d2c7, type: 3}
       propertyPath: m_Name
-      value: kanaduti
+      value: Kanaduti
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e9326451615fa8c40ae70e111b90d2c7, type: 3}
       propertyPath: m_TagString

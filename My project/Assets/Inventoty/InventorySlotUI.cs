@@ -4,13 +4,18 @@ using TMPro;
 
 public class InventorySlotUI : MonoBehaviour
 {
+    [Header("アイテム情報")]
     public Image iconImage;
     public Button button;
     public ItemData currentItem;
 
-    [Header("UI参照")]
-    public TextMeshProUGUI itemNameText;
-    public TextMeshProUGUI itemDescText;
+    [Header("UI参照（どちらか使用）")]
+    public TextMeshProUGUI itemNameText_TMP;
+    public TextMeshProUGUI itemDescText_TMP;
+    public Text itemNameText_Legacy;
+    public Text itemDescText_Legacy;
+
+    [Header("装備ボタン")]
     public Button equipButton;
 
     void Start()
@@ -21,9 +26,15 @@ public class InventorySlotUI : MonoBehaviour
 
     public void SetItem(ItemData item)
     {
+        if (item == null) return;
+
         currentItem = item;
-        iconImage.sprite = item.icon;
-        iconImage.enabled = true;
+
+        if (iconImage != null)
+        {
+            iconImage.sprite = item.icon;
+            iconImage.enabled = true;
+        }
     }
 
     public bool HasItem() => currentItem != null;
@@ -31,15 +42,31 @@ public class InventorySlotUI : MonoBehaviour
     private void OnClickSlot()
     {
         if (currentItem == null) return;
-        ItemDetailPanel.Instance.ShowItem(currentItem);
 
-        // 説明更新
-        itemNameText.text = currentItem.itemName;
-        itemDescText.text = currentItem.description;
+        // 詳細パネル表示
+        if (ItemDetailPanel.Instance != null)
+        {
+            ItemDetailPanel.Instance.ShowItem(currentItem);
+        }
 
-        // 装備ボタン更新
-        equipButton.onClick.RemoveAllListeners();
-        equipButton.onClick.AddListener(() => EquipItem());
+        // --- 名前 ---
+        if (itemNameText_TMP != null)
+            itemNameText_TMP.text = currentItem.itemName;
+        if (itemNameText_Legacy != null)
+            itemNameText_Legacy.text = currentItem.itemName;
+
+        // --- 説明 ---
+        if (itemDescText_TMP != null)
+            itemDescText_TMP.text = currentItem.description;
+        if (itemDescText_Legacy != null)
+            itemDescText_Legacy.text = currentItem.description;
+
+        // 装備ボタン設定
+        if (equipButton != null)
+        {
+            equipButton.onClick.RemoveAllListeners();
+            equipButton.onClick.AddListener(EquipItem);
+        }
     }
 
     private void EquipItem()
@@ -47,7 +74,13 @@ public class InventorySlotUI : MonoBehaviour
         if (currentItem == null) return;
         Debug.Log($"装備中: {currentItem.itemName}");
 
-        // PlayerItemHolderに通知
-        PlayerItemHolder.Instance.EquipItem(currentItem);
+        if (PlayerItemHolder.Instance != null)
+        {
+            PlayerItemHolder.Instance.EquipItem(currentItem);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerItemHolder.Instance が見つかりません。");
+        }
     }
 }
