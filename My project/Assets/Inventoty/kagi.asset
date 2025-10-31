@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
   m_Name: kagi
   m_EditorClassIdentifier: 
-  itemName: kagi
+  itemName: "\u9375"
   icon: {fileID: 21300000, guid: 46649bcc6f2ae5842bf0c83d4e619171, type: 3}
   description: "\u9375"
   worldPrefab: {fileID: 9000368826627040996, guid: b6fb12c2664806c468a576a65ba9aa89, type: 3}
