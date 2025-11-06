@@ -2193,7 +2193,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &327911718 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
@@ -4228,7 +4227,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &647374610 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
@@ -6481,6 +6479,7 @@ GameObject:
   - component: {fileID: 785381516}
   - component: {fileID: 785381518}
   - component: {fileID: 785381517}
+  - component: {fileID: 785381519}
   m_Layer: 5
   m_Name: SelectedItemImage
   m_TagString: Untagged
@@ -6545,6 +6544,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785381515}
   m_CullTransparentMesh: 1
+--- !u!114 &785381519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785381515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dedd9a323dd1a8419530a681ceafa1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayImage: {fileID: 785381517}
 --- !u!1 &786639145
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,7 +7485,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &893393136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10218,7 +10229,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &1252346932 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
@@ -10277,7 +10287,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &1254884678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
@@ -11061,7 +11070,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &1345458004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
@@ -13339,11 +13347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5236c68f94a0fef46845c860c375450d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 2005202552}
-  itemNameText_TMP: {fileID: 0}
-  itemDescText_TMP: {fileID: 0}
-  itemNameText_Legacy: {fileID: 1737637539}
-  itemDescText_Legacy: {fileID: 0}
+  itemIcon: {fileID: 0}
+  itemName_TMP: {fileID: 0}
+  itemDesc_TMP: {fileID: 0}
+  itemName_Legacy: {fileID: 0}
+  itemDesc_Legacy: {fileID: 0}
   equipButton: {fileID: 629720334}
 --- !u!1 &1657035320
 GameObject:
@@ -13632,7 +13640,6 @@ MonoBehaviour:
   itemDescText_TMP: {fileID: 0}
   itemNameText_Legacy: {fileID: 1737637539}
   itemDescText_Legacy: {fileID: 0}
-  equipButton: {fileID: 629720334}
 --- !u!114 &1680064051 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4090356968523656043, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}

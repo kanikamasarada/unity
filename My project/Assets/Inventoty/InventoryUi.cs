@@ -15,8 +15,7 @@ public class InventoryUI : MonoBehaviour
 
     public void AddItem(ItemData item)
     {
-        RefreshSlots();
-
+        // まず現在のスロットを確認
         foreach (var slot in slots)
         {
             if (!slot.HasItem())
@@ -26,6 +25,7 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
+        // 🟢 新しいスロットを生成して追加
         GameObject newSlotObj = Instantiate(itemSlotPrefab, itemSlotsParent);
         var newSlot = newSlotObj.GetComponent<InventorySlotUI>();
         newSlot.SetItem(item);

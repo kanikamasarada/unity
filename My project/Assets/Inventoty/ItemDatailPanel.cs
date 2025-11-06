@@ -6,65 +6,53 @@ public class ItemDetailPanel : MonoBehaviour
 {
     public static ItemDetailPanel Instance;
 
-    [Header("UI 参照")]
+    [Header("UI参照")]
     public Image itemIcon;
-
-    [Header("テキスト（どちらか使用）")]
-    public TextMeshProUGUI itemNameText_TMP;
-    public TextMeshProUGUI itemDescText_TMP;
-    public Text itemNameText_Legacy;
-    public Text itemDescText_Legacy;
-
-    [Header("ボタン設定")]
+    public TextMeshProUGUI itemName_TMP;
+    public TextMeshProUGUI itemDesc_TMP;
+    public Text itemName_Legacy;
+    public Text itemDesc_Legacy;
     public Button equipButton;
 
-    private ItemData currentItem;
+    private ItemData selectedItem;
 
     void Awake()
     {
         Instance = this;
-        if (equipButton != null)
-            equipButton.onClick.AddListener(OnEquipButton);
     }
 
     public void ShowItem(ItemData item)
     {
-        if (item == null) return;
+        selectedItem = item;
 
-        currentItem = item;
-
-        // アイコン表示
         if (itemIcon != null)
-        {
             itemIcon.sprite = item.icon;
-            itemIcon.enabled = true;
-        }
 
-        // テキスト更新（TMP → Legacy の順に確認）
-        if (itemNameText_TMP != null)
-            itemNameText_TMP.text = item.itemName;
-        if (itemDescText_TMP != null)
-            itemDescText_TMP.text = item.description;
+        if (itemName_TMP != null)
+            itemName_TMP.text = item.itemName;
+        if (itemDesc_TMP != null)
+            itemDesc_TMP.text = item.description;
 
-        if (itemNameText_Legacy != null)
-            itemNameText_Legacy.text = item.itemName;
-        if (itemDescText_Legacy != null)
-            itemDescText_Legacy.text = item.description;
+        if (itemName_Legacy != null)
+            itemName_Legacy.text = item.itemName;
+        if (itemDesc_Legacy != null)
+            itemDesc_Legacy.text = item.description;
 
         gameObject.SetActive(true);
+
+        // 装備ボタンのイベント登録
+        if (equipButton != null)
+        {
+            equipButton.onClick.RemoveAllListeners();
+            equipButton.onClick.AddListener(EquipItem);
+        }
     }
 
-    void OnEquipButton()
+    private void EquipItem()
     {
-        if (currentItem == null) return;
+        if (selectedItem == null) return;
 
-        if (PlayerItemHolder.Instance != null)
-        {
-            PlayerItemHolder.Instance.EquipItem(currentItem);
-        }
-        else
-        {
-            Debug.LogWarning("PlayerItemHolder.Instance が見つかりません。");
-        }
+        Debug.Log($"装備中: {selectedItem.itemName}");
+        PlayerItemHolder.Instance?.EquipItem(selectedItem);
     }
 }
