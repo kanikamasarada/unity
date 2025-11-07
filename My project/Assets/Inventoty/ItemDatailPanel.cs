@@ -7,52 +7,48 @@ public class ItemDetailPanel : MonoBehaviour
     public static ItemDetailPanel Instance;
 
     [Header("UI参照")]
+    public GameObject panelRoot; // ← 詳細パネルの親
     public Image itemIcon;
     public TextMeshProUGUI itemName_TMP;
     public TextMeshProUGUI itemDesc_TMP;
-    public Text itemName_Legacy;
-    public Text itemDesc_Legacy;
     public Button equipButton;
 
-    private ItemData selectedItem;
+    private ItemData currentItem;
 
-    void Awake()
+void Awake()
+{
+    Instance = this;
+    gameObject.SetActive(false); // ← panelRoot削除
+}
+
+public void ShowItem(ItemData item)
+{
+    if (item == null) return;
+    currentItem = item;
+
+    if (itemIcon != null) itemIcon.sprite = item.icon;
+    if (itemName_TMP != null) itemName_TMP.text = item.itemName;
+    if (itemDesc_TMP != null) itemDesc_TMP.text = item.description;
+
+    gameObject.SetActive(true);
+
+    if (equipButton != null)
     {
-        Instance = this;
+        equipButton.onClick.RemoveAllListeners();
+        equipButton.onClick.AddListener(EquipItem);
     }
+}
 
-    public void ShowItem(ItemData item)
-    {
-        selectedItem = item;
-
-        if (itemIcon != null)
-            itemIcon.sprite = item.icon;
-
-        if (itemName_TMP != null)
-            itemName_TMP.text = item.itemName;
-        if (itemDesc_TMP != null)
-            itemDesc_TMP.text = item.description;
-
-        if (itemName_Legacy != null)
-            itemName_Legacy.text = item.itemName;
-        if (itemDesc_Legacy != null)
-            itemDesc_Legacy.text = item.description;
-
-        gameObject.SetActive(true);
-
-        // 装備ボタンのイベント登録
-        if (equipButton != null)
-        {
-            equipButton.onClick.RemoveAllListeners();
-            equipButton.onClick.AddListener(EquipItem);
-        }
-    }
+public void Hide()
+{
+    gameObject.SetActive(false);
+}
 
     private void EquipItem()
     {
-        if (selectedItem == null) return;
+        if (currentItem == null) return;
 
-        Debug.Log($"装備中: {selectedItem.itemName}");
-        PlayerItemHolder.Instance?.EquipItem(selectedItem);
+        Debug.Log($"装備中: {currentItem.itemName}");
+        PlayerItemHolder.Instance?.EquipItem(currentItem);
     }
 }

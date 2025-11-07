@@ -34,7 +34,9 @@ public class PickupMessage : MonoBehaviour
 
         if (isActiveTMP || isActiveLegacy)
         {
-            timer += Time.deltaTime;
+            // 🟡 時間停止中でも進むように変更
+            timer += Time.unscaledDeltaTime;
+
             if (timer > displayTime)
             {
                 if (messageText_TMP != null)

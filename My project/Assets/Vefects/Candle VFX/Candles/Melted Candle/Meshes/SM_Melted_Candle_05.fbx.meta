@@ -1,14 +1,21 @@
 fileFormatVersion: 2
 guid: 7810eaf0a8c394e44a9c5713662ad33e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299223
+  packageName: Candle VFX
+  packageVersion: 1.0.0
+  assetPath: Assets/Vefects/Candle VFX/Candles/Melted Candle/Meshes/SM_Melted_Candle_05.fbx
+  uploadId: 706635
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -105,10 +112,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 299223
-  packageName: Candle VFX
-  packageVersion: 1.0.0
-  assetPath: Assets/Vefects/Candle VFX/Candles/Melted Candle/Meshes/SM_Melted_Candle_05.fbx
-  uploadId: 706635

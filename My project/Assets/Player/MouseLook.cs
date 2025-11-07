@@ -18,7 +18,7 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         // Inventoryが開いている場合は視点操作を止める
-        if (InventoryManager.Instance != null && InventoryManager.Instance.IsOpen())
+        if (InventoryManager.Instance != null && InventoryManager.Instance.IsOpen)
             return;
 
         var pauseMenu = FindFirstObjectByType<PauseMenu>();

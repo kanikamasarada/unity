@@ -4,9 +4,14 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
+    [Header("UI参照")]
     public InventoryUI inventoryUI;
     public PauseMenu pauseMenu;
+
     private bool isOpen = false;
+    public bool IsOpen => isOpen;
+
+    private PlayerMovement playerMovement; // ← プレイヤー動作スクリプト参照
 
     void Awake()
     {
@@ -14,15 +19,26 @@ public class InventoryManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        // PlayerMovement を探す
+        playerMovement = FindFirstObjectByType<PlayerMovement>();
+    }
+
+    void Start()
+    {
+        if (inventoryUI != null)
+            inventoryUI.gameObject.SetActive(false);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
     }
 
     void Update()
     {
-        // PauseMenu が開いていたら Tab 無効化
         if (pauseMenu != null && pauseMenu.IsPaused)
             return;
 
-        // Tabキーでインベントリ開閉
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
@@ -32,41 +48,44 @@ public class InventoryManager : MonoBehaviour
     public void ToggleInventory()
     {
         isOpen = !isOpen;
+
         if (inventoryUI != null)
             inventoryUI.gameObject.SetActive(isOpen);
 
-        UpdateGamePauseState();
-    }
+        if (isOpen)
+        {
+            // 🔹 開いたとき：完全停止
+            Time.timeScale = 0f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            if (playerMovement != null) playerMovement.enabled = false;
 
-    private void UpdateGamePauseState()
-    {
-        bool shouldPause = isOpen || (pauseMenu != null && pauseMenu.IsPaused);
+            Debug.Log("🟡 Inventory 開いた → 完全停止");
+        }
+        else
+        {
+            // 🔹 閉じたとき：再開
+            Time.timeScale = 1f;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            if (playerMovement != null) playerMovement.enabled = true;
 
-        // マウスカーソル
-        Cursor.visible = shouldPause;
-        Cursor.lockState = shouldPause ? CursorLockMode.None : CursorLockMode.Locked;
+            Debug.Log("🟢 Inventory 閉じた → 再開");
 
-        // 世界停止
-        Time.timeScale = shouldPause ? 0f : 1f;
-
-        // プレイヤー移動停止
-        var playerMove = FindFirstObjectByType<PlayerMovement>();
-        if (playerMove != null)
-            playerMove.enabled = !shouldPause;
-
-        var rb = FindFirstObjectByType<Rigidbody>();
-        if (rb != null)
-            rb.isKinematic = shouldPause;
+            if (ItemDetailPanel.Instance != null)
+                ItemDetailPanel.Instance.Hide();
+        }
     }
 
     public void AddItem(ItemData item)
     {
         if (inventoryUI != null)
+        {
             inventoryUI.AddItem(item);
-    }
-
-    public bool IsOpen()
-    {
-        return isOpen;
+        }
+        else
+        {
+            Debug.LogWarning("⚠ InventoryUI が未設定！");
+        }
     }
 }
