@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     private bool isOpen = false;
     public bool IsOpen => isOpen;
 
-    private PlayerMovement playerMovement; // ← プレイヤー動作スクリプト参照
+    public ItemData LastSelectedItem { get; private set; }
 
     void Awake()
     {
@@ -19,26 +19,15 @@ public class InventoryManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-
-        // PlayerMovement を探す
-        playerMovement = FindFirstObjectByType<PlayerMovement>();
-    }
-
-    void Start()
-    {
-        if (inventoryUI != null)
-            inventoryUI.gameObject.SetActive(false);
-
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1f;
     }
 
     void Update()
     {
+        // ポーズ中はインベントリ開閉を無効化
         if (pauseMenu != null && pauseMenu.IsPaused)
             return;
 
+        // Tabでインベントリ開閉
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
@@ -52,40 +41,43 @@ public class InventoryManager : MonoBehaviour
         if (inventoryUI != null)
             inventoryUI.gameObject.SetActive(isOpen);
 
-        if (isOpen)
-        {
-            // 🔹 開いたとき：完全停止
-            Time.timeScale = 0f;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            if (playerMovement != null) playerMovement.enabled = false;
+        UpdateGamePauseState();
 
-            Debug.Log("🟡 Inventory 開いた → 完全停止");
-        }
-        else
-        {
-            // 🔹 閉じたとき：再開
-            Time.timeScale = 1f;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            if (playerMovement != null) playerMovement.enabled = true;
+        // 閉じたら詳細パネル非表示
+        if (!isOpen && ItemDetailPanel.Instance != null)
+            ItemDetailPanel.Instance.Hide();
+    }
 
-            Debug.Log("🟢 Inventory 閉じた → 再開");
+    private void UpdateGamePauseState()
+    {
+        bool shouldPause = isOpen || (pauseMenu != null && pauseMenu.IsPaused);
 
-            if (ItemDetailPanel.Instance != null)
-                ItemDetailPanel.Instance.Hide();
-        }
+        // マウスカーソル
+        Cursor.visible = shouldPause;
+        Cursor.lockState = shouldPause ? CursorLockMode.None : CursorLockMode.Locked;
+
+        // 世界停止
+        Time.timeScale = shouldPause ? 0f : 1f;
+
+        // プレイヤー移動停止
+        var playerMove = FindFirstObjectByType<PlayerMovement>();
+        if (playerMove != null)
+            playerMove.enabled = !shouldPause;
+
+        // Rigidbody停止
+        var rb = FindFirstObjectByType<Rigidbody>();
+        if (rb != null)
+            rb.isKinematic = shouldPause;
     }
 
     public void AddItem(ItemData item)
     {
         if (inventoryUI != null)
-        {
             inventoryUI.AddItem(item);
-        }
-        else
-        {
-            Debug.LogWarning("⚠ InventoryUI が未設定！");
-        }
+    }
+
+    public void SetLastSelectedItem(ItemData item)
+    {
+        LastSelectedItem = item;
     }
 }

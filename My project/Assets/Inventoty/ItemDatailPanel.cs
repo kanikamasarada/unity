@@ -1,48 +1,47 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class ItemDetailPanel : MonoBehaviour
 {
     public static ItemDetailPanel Instance;
 
     [Header("UI参照")]
-    public GameObject panelRoot; // ← 詳細パネルの親
+    public GameObject panelRoot;
     public Image itemIcon;
-    public TextMeshProUGUI itemName_TMP;
-    public TextMeshProUGUI itemDesc_TMP;
+    public Text itemName_Legacy;
+    public Text itemDesc_Legacy;
     public Button equipButton;
 
     private ItemData currentItem;
 
-void Awake()
-{
-    Instance = this;
-    gameObject.SetActive(false); // ← panelRoot削除
-}
-
-public void ShowItem(ItemData item)
-{
-    if (item == null) return;
-    currentItem = item;
-
-    if (itemIcon != null) itemIcon.sprite = item.icon;
-    if (itemName_TMP != null) itemName_TMP.text = item.itemName;
-    if (itemDesc_TMP != null) itemDesc_TMP.text = item.description;
-
-    gameObject.SetActive(true);
-
-    if (equipButton != null)
+    void Awake()
     {
-        equipButton.onClick.RemoveAllListeners();
-        equipButton.onClick.AddListener(EquipItem);
+        Instance = this;
+        gameObject.SetActive(false);
     }
-}
 
-public void Hide()
-{
-    gameObject.SetActive(false);
-}
+    public void ShowItem(ItemData item)
+    {
+        if (item == null) return;
+        currentItem = item;
+
+        if (itemIcon != null) itemIcon.sprite = item.icon;
+        if (itemName_Legacy != null) itemName_Legacy.text = item.itemName;
+        if (itemDesc_Legacy != null) itemDesc_Legacy.text = item.description;
+
+        gameObject.SetActive(true);
+
+        if (equipButton != null)
+        {
+            equipButton.onClick.RemoveAllListeners();
+            equipButton.onClick.AddListener(EquipItem);
+        }
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
 
     private void EquipItem()
     {

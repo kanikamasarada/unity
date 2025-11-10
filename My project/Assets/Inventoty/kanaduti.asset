@@ -18,4 +18,4 @@ MonoBehaviour:
   worldPrefab: {fileID: 3939850679074068360, guid: 6978ed54c29da5c4ea86a3e5fec5cca5, type: 3}
   worldRotationOffset: {x: 0, y: 0, z: 0}
   worldPositionOffset: {x: 0, y: 0, z: 0}
-  worldScale: {x: 1, y: 1, z: 1}
+  worldScale: {x: 0.2, y: 0.2, z: 0.2}

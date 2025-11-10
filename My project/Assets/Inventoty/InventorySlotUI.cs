@@ -9,7 +9,6 @@ public class InventorySlotUI : MonoBehaviour
 
     void Start()
     {
-        // ボタンがついていればクリックイベントを登録
         var btn = GetComponent<Button>();
         if (btn != null)
         {
@@ -43,7 +42,7 @@ public class InventorySlotUI : MonoBehaviour
     {
         if (currentItem == null) return;
 
-        // 右側の詳細パネル表示
         ItemDetailPanel.Instance?.ShowItem(currentItem);
+        InventoryManager.Instance?.SetLastSelectedItem(currentItem);
     }
 }

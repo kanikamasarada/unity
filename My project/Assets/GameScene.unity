@@ -14126,10 +14126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5236c68f94a0fef46845c860c375450d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelRoot: {fileID: 0}
-  itemIcon: {fileID: 2005202552}
-  itemName_TMP: {fileID: 0}
-  itemDesc_TMP: {fileID: 0}
+  panelRoot: {fileID: 1654948963}
+  itemIcon: {fileID: 785381517}
+  itemName_Legacy: {fileID: 0}
+  itemDesc_Legacy: {fileID: 0}
   equipButton: {fileID: 629720334}
 --- !u!1 &1657035320
 GameObject:
@@ -16253,7 +16253,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ab4cb22578c944b7b3a46e8e80bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenOffset: {x: 0.8, y: 0.5, z: 2}
+  playerCameraOrBody: {fileID: 251262029}
+  holdOffset: {x: 0.5, y: -0.3, z: 1}
+  rotationOffset: {x: 0, y: 0, z: 0}
+  scale: {x: 0.2, y: 0.2, z: 0.2}
+  equipKey: 101
+  unequipKey: 113
 --- !u!1 &1905118367
 GameObject:
   m_ObjectHideFlags: 0
