@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\\u958B\u59CB\u3001\u7D42\u4E86\\hoverunderlinelegacy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\\u4F1A\u8A71\\dialogueselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialogueselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u958B\u59CB\u3001\u7D42\u4E86\\hoverunderlinelegacy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u958B\u59CB\u3001\u7D42\u4E86\\hoverunderlinelegacy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\UI\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -98,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +110,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "DialogueSelector.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueSelector.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueSelector.cs",
+              "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueSelector.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAqwIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T02:31:35.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AdditionalLightsShadowCasterPass.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
@@ -118,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HoverUnderlineLegacy.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
               "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
@@ -126,12 +143,11 @@
               "RelativeToolTip": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAmwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:05:52.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T05:05:52.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
@@ -142,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SlideDoor.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\SlideDoor.cs",
@@ -154,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\NewMonoBehaviourScript.cs",
@@ -165,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ItemPickUp.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemPickUp.cs",
@@ -177,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "TextMeshProUGUI.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
@@ -189,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "InventorySlotUI.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventorySlotUI.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventorySlotUI.cs",
@@ -201,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ItemDatailPanel.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemDatailPanel.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemDatailPanel.cs",
@@ -213,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "PickupMessage.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\PickupMessage.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\PickupMessage.cs",
@@ -225,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "DateChangeController.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DateChangeController.cs",
@@ -237,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Outline.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\Outline.cs",
               "RelativeDocumentMoniker": "Assets\\UI\\Outline.cs",
@@ -249,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "NewMonoBehaviourScript1.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript1.cs",
               "RelativeDocumentMoniker": "Assets\\UI\\NewMonoBehaviourScript1.cs",
@@ -261,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\UI\\NewMonoBehaviourScript.cs",
@@ -272,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "quitgame.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
               "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
@@ -284,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "gameStart.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\gameStart.cs",
               "RelativeDocumentMoniker": "Assets\\gameStart.cs",
@@ -295,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "SlideDoor.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\SlideDoor.cs",
               "RelativeDocumentMoniker": "Assets\\SlideDoor.cs",
@@ -307,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Lit.shader",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
@@ -319,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueManager.cs",
@@ -331,19 +347,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "DialogueTrigger.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
               "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
               "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAABFwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T02:24:19.439Z"
+              "WhenOpened": "2025-10-20T02:24:19.439Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "TMP_Settings.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
@@ -355,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "TMP_PackageResourceImporter.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",

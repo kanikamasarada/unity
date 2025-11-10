@@ -1,11 +1,15 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
+/// <summary>
+/// 会話対象（オブジェクト）に付けるコンポーネント。
+/// - DialogueSelector によって選ばれたときのみ E キーで会話を開始する。
+/// - 大きな群れに置いても、カメラ中心に近いものが選ばれる。
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class DialogueTrigger : MonoBehaviour
 {
-    public bool isTalking = false; // 会話中フラグ
-    public float talkDistance = 3f; // 会話可能距離
+    [Header("Dialogue")]
     public List<DialogueLine> dialogueLines = new List<DialogueLine>()
     {
         new DialogueLine("？？？", "……ここはどこだ？"),
@@ -13,49 +17,24 @@ public class DialogueTrigger : MonoBehaviour
         new DialogueLine("主人公", "……何かの気配がする。")
     };
 
-    private static DialogueTrigger currentTarget; // 現在見ている会話対象
+    [Header("設定")]
+    [Tooltip("会話可能かどうかを一時的に無効化したいときに使う")]
+    public bool ignore = false;
 
+    [Tooltip("自分の会話が進行中かどうか（内部フラグ）")]
+    public bool isTalking = false;
+
+    // Eキー入力は DialogueSelector.CurrentTarget を使う
     void Update()
     {
-        DetectPlayerLooking();
-
-        if (Input.GetKeyDown(KeyCode.E) && currentTarget == this && !isTalking)
+        // 選定されたターゲットがこのオブジェクトで、かつ E キーが押されたら会話開始
+        if (!ignore && DialogueSelector.CurrentTarget == this && Input.GetKeyDown(KeyCode.E) && !isTalking)
         {
             StartDialogue();
         }
     }
 
-    /// <summary>
-    /// カメラ中心からレイを飛ばして「見ている対象」を取得
-    /// </summary>
-    void DetectPlayerLooking()
-    {
-        var player = GameObject.FindWithTag("Player");
-        if (player == null) return;
-
-        Camera cam = Camera.main;
-        if (cam == null) return;
-
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, talkDistance))
-        {
-            DialogueTrigger target = hit.collider.GetComponent<DialogueTrigger>();
-
-            if (target != null)
-            {
-                currentTarget = target;
-                return;
-            }
-        }
-
-        // 何も見ていない場合リセット
-        if (currentTarget == this)
-            currentTarget = null;
-    }
-
-    void StartDialogue()
+    public void StartDialogue()
     {
         isTalking = true;
         DialogueManager.instance.ShowDialogue(dialogueLines, OnDialogueEnd);
@@ -69,7 +48,8 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, talkDistance);
+        // エディタで見やすくするための表示
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 0.2f);
     }
 }
