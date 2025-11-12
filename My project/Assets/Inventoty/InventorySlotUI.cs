@@ -5,6 +5,7 @@ public class InventorySlotUI : MonoBehaviour
 {
     [Header("UI参照")]
     public Image iconImage;
+
     private ItemData currentItem;
 
     void Start()
@@ -18,6 +19,7 @@ public class InventorySlotUI : MonoBehaviour
     }
 
     public bool HasItem() => currentItem != null;
+    public ItemData GetCurrentItem() => currentItem;
 
     public void SetItem(ItemData item)
     {

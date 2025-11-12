@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
-  m_Name: kanaduti
+  m_Name: kagi
   m_EditorClassIdentifier: 
-  itemName: "\u30CF\u30F3\u30DE\u30FC"
-  icon: {fileID: 21300000, guid: a46ce1bb2cea281448fa0b42532e1244, type: 3}
-  description: "\u30CF\u30F3\u30DE\u30FC"
-  worldPrefab: {fileID: 3939850679074068360, guid: 6978ed54c29da5c4ea86a3e5fec5cca5, type: 3}
+  itemName: kagi
+  icon: {fileID: 21300000, guid: 46649bcc6f2ae5842bf0c83d4e619171, type: 3}
+  description: "\u9375"
+  worldPrefab: {fileID: 9000368826627040996, guid: b6fb12c2664806c468a576a65ba9aa89, type: 3}
   worldRotationOffset: {x: 0, y: 0, z: 0}
   worldPositionOffset: {x: 0, y: 0, z: 0}
-  worldScale: {x: 0.2, y: 0.2, z: 0.2}
+  worldScale: {x: 222, y: 222, z: 222}

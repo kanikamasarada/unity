@@ -3,26 +3,40 @@ using System.Collections.Generic;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Transform itemSlotsParent;
-    public GameObject itemSlotPrefab;
+    public Transform slotParent;
 
     private List<InventorySlotUI> slots = new List<InventorySlotUI>();
 
     void Start()
     {
-        if (itemSlotPrefab.activeSelf)
-            itemSlotPrefab.SetActive(false);
+        RefreshSlots();
     }
 
     public void AddItem(ItemData item)
     {
-        // 新しいスロットを生成
-        GameObject newSlot = Instantiate(itemSlotPrefab, itemSlotsParent);
-        newSlot.SetActive(true);
+        RefreshSlots();
 
-        var slotUI = newSlot.GetComponent<InventorySlotUI>();
-        slotUI.SetItem(item);
-
-        slots.Add(slotUI);
+        foreach (var slot in slots)
+        {
+            if (!slot.HasItem())
+            {
+                slot.SetItem(item);
+                return;
+            }
+        }
     }
+
+    public void RefreshSlots()
+    {
+        slots.Clear();
+        foreach (Transform child in slotParent)
+        {
+            var slot = child.GetComponent<InventorySlotUI>();
+            if (slot != null && !slots.Contains(slot))
+                slots.Add(slot);
+        }
+    }
+
+    
+    
 }

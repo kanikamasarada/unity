@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    // ---------------------------------------------
+    // ▼ ここはあなたの元のコード（そのまま）
+    // ---------------------------------------------
     void Update()
     {
         // ポーズ中はインベントリ開閉を無効化
@@ -79,5 +83,50 @@ public class InventoryManager : MonoBehaviour
     public void SetLastSelectedItem(ItemData item)
     {
         LastSelectedItem = item;
+    }
+
+    // ---------------------------------------------
+    // ▼ ここから下が「追記」部分（合成機能）
+    // ---------------------------------------------
+    private Dictionary<(string, string), ItemData> comboTable = new();
+
+    void Start()
+    {
+        // 合成ルール登録（例）
+        // Resources/Items/StrongHammer.asset を作ったら有効にできる
+        comboTable.Add(("kanaduti", "kagi"), Resources.Load<ItemData>("Items/StrongHammer"));
+    }
+
+    public void TryCombineItems(InventorySlotUI slotA, InventorySlotUI slotB)
+    {
+        var itemA = GetPrivateItem(slotA);
+        var itemB = GetPrivateItem(slotB);
+
+        if (itemA == null || itemB == null) return;
+
+        if (comboTable.TryGetValue((itemA.itemName, itemB.itemName), out var resultItem) ||
+            comboTable.TryGetValue((itemB.itemName, itemA.itemName), out resultItem))
+        {
+            // 合成成功
+            Debug.Log($"✅ 合成成功！ → {resultItem.itemName}");
+
+            // 元アイテム削除・合成結果に置き換え
+            slotA.SetItem(null);
+            slotB.SetItem(resultItem);
+        }
+        else
+        {
+            Debug.Log("❌ 合成できませんでした");
+        }
+    }
+
+    /// <summary>
+    /// InventorySlotUI の private な currentItem を安全に取得
+    /// </summary>
+    private ItemData GetPrivateItem(InventorySlotUI slot)
+    {
+        var field = typeof(InventorySlotUI).GetField("currentItem",
+            System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        return field?.GetValue(slot) as ItemData;
     }
 }
