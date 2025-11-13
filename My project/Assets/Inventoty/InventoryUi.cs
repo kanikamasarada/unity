@@ -1,42 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
-
 public class InventoryUI : MonoBehaviour
 {
-    public Transform slotParent;
-
+    public Transform itemSlotsParent;
+    public GameObject itemSlotPrefab;
     private List<InventorySlotUI> slots = new List<InventorySlotUI>();
-
     void Start()
     {
-        RefreshSlots();
+        if (itemSlotPrefab.activeSelf)
+            itemSlotPrefab.SetActive(false);
     }
-
     public void AddItem(ItemData item)
     {
-        RefreshSlots();
-
-        foreach (var slot in slots)
-        {
-            if (!slot.HasItem())
-            {
-                slot.SetItem(item);
-                return;
-            }
-        }
+        // 新しいスロットを生成
+        GameObject newSlot = Instantiate(itemSlotPrefab, itemSlotsParent);
+        newSlot.SetActive(true);
+        var slotUI = newSlot.GetComponent<InventorySlotUI>();
+        slotUI.SetItem(item);
+        slots.Add(slotUI);
     }
-
-    public void RefreshSlots()
-    {
-        slots.Clear();
-        foreach (Transform child in slotParent)
-        {
-            var slot = child.GetComponent<InventorySlotUI>();
-            if (slot != null && !slots.Contains(slot))
-                slots.Add(slot);
-        }
-    }
-
-    
-    
 }

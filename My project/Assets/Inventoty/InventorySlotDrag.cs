@@ -1,50 +1,54 @@
-using UnityEngine;
+/*using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventorySlotDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private InventorySlotUI thisSlot;
-    private InventorySlotUI targetSlot;
+    private Transform originalParent;
+    private Canvas canvas;
+    private Image iconImage;
+    private CanvasGroup canvasGroup;
 
     void Awake()
     {
-        thisSlot = GetComponent<InventorySlotUI>();
+        iconImage = GetComponent<Image>();
+        canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        canvas = GetComponentInParent<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // ドラッグ開始時にアイコン半透明などにしたいならここに追加
+        if (iconImage == null || iconImage.sprite == null) return;
+
+        originalParent = transform.parent;
+        transform.SetParent(canvas.transform, true);
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        // 省略（視覚的な移動処理）
+        if (iconImage == null) return;
+        transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // ドロップ位置のUI要素を取得
-        if (eventData.pointerCurrentRaycast.gameObject == null)
-            return;
+        transform.SetParent(originalParent, true);
+        canvasGroup.blocksRaycasts = true;
 
-        targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponent<InventorySlotUI>();
-        if (targetSlot == null)
-            targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<InventorySlotUI>();
+        // ドロップ対象を取得
+        GameObject targetObj = eventData.pointerCurrentRaycast.gameObject;
+        if (targetObj == null) return;
 
-        if (targetSlot == null)
+        var targetSlot = targetObj.GetComponent<InventorySlotUI>();
+        var thisSlot = GetComponent<InventorySlotUI>();
+
+        if (targetSlot != null && thisSlot != null && targetSlot != thisSlot)
         {
-            Debug.Log("❌ ドロップ先がスロットではありません");
-            return;
+            InventoryManager.Instance?.TryCombineItems(thisSlot, targetSlot);
         }
 
-        // 合成処理を安全に呼ぶ
-        if (InventoryManager.Instance != null)
-        {
-            InventoryManager.Instance.TryCombineItems(thisSlot, targetSlot);
-        }
-        else
-        {
-            Debug.LogError("❌ InventoryManager.Instance が存在しません");
-        }
+        transform.localPosition = Vector3.zero;
     }
 }
+*/

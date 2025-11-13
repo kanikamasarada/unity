@@ -8407,7 +8407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d75c8ae9b2ec1c4b81013012500d2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotImage: {fileID: 974861143}
+  slotImage: {fileID: 2005202552}
   iconPrefab: {fileID: 468109912}
   kagiTarget: {fileID: 0}
   karaageTarget: {fileID: 0}
@@ -9215,17 +9215,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970802954}
   m_Mesh: {fileID: 2591943981575976877, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}
---- !u!114 &974861143 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 842069999117377257, guid: 79a76ee74694cf54c9a1903e55ec4b2d, type: 3}
-  m_PrefabInstance: {fileID: 1068154016484547291}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &986742334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13334,7 +13323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b2e74bcf1b652448ea6a25346c2270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotParent: {fileID: 177228771}
+  itemSlotsParent: {fileID: 177228771}
+  itemSlotPrefab: {fileID: 893393129}
 --- !u!1 &1525110975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8098549288859632352, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}
@@ -14346,7 +14336,7 @@ MonoBehaviour:
   panelRoot: {fileID: 1654948963}
   itemIcon: {fileID: 785381517}
   itemName_Legacy: {fileID: 0}
-  itemDesc_Legacy: {fileID: 0}
+  itemDesc_Legacy: {fileID: 1737637539}
   equipButton: {fileID: 629720334}
 --- !u!1 &1657035320
 GameObject:
@@ -16518,7 +16508,7 @@ MonoBehaviour:
   holdOffset: {x: 0.5, y: -0.3, z: 1}
   rotationOffset: {x: 0, y: 0, z: 0}
   scale: {x: 0.2, y: 0.2, z: 0.2}
-  equipKey: 0
+  equipKey: 282
   unequipKey: 113
 --- !u!1 &1905118367
 GameObject:
