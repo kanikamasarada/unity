@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: StrongHammer
   icon: {fileID: 21300000, guid: 156d3346ee313e341ab0edd2a840578e, type: 3}
   description: "\u3053\u308C\u306F\u30C6\u30B9\u30C8\u7528\u306E\u925B\u7B46\u30CF\u30F3\u30DE\u30FC"
-  worldPrefab: {fileID: 3939850679074068360, guid: 6978ed54c29da5c4ea86a3e5fec5cca5, type: 3}
+  worldPrefab: {fileID: 8204032920394381444, guid: 53fac82927cca9d4b8db32731719b33a, type: 3}
   worldRotationOffset: {x: 0, y: 0, z: 0}
   worldPositionOffset: {x: 0, y: 0, z: 0}
   worldScale: {x: 1, y: 1, z: 1}

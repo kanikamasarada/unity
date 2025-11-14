@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+
 public class InventorySlotUI : MonoBehaviour
 {
-    [Header("UI参照")]
     public Image iconImage;
     private ItemData currentItem;
+
     void Start()
     {
         var btn = GetComponent<Button>();
@@ -14,13 +15,16 @@ public class InventorySlotUI : MonoBehaviour
             btn.onClick.AddListener(OnClick);
         }
     }
+
     public bool HasItem() => currentItem != null;
+
     public void SetItem(ItemData item)
     {
         currentItem = item;
+
         if (iconImage != null)
         {
-            if (item != null)
+            if(item != null)
             {
                 iconImage.sprite = item.icon;
                 iconImage.enabled = true;
@@ -32,10 +36,21 @@ public class InventorySlotUI : MonoBehaviour
             }
         }
     }
+
+    public ItemData GetCurrentItem() => currentItem;
+
     private void OnClick()
     {
-        if (currentItem == null) return;
+        if(currentItem == null) return;
+
         ItemDetailPanel.Instance?.ShowItem(currentItem);
         InventoryManager.Instance?.SetLastSelectedItem(currentItem);
+
+        // 装備反映
+        var playerEquip = FindFirstObjectByType<PlayerEquipment>();
+        if(playerEquip != null)
+        {
+            playerEquip.Equip(currentItem);
+        }
     }
 }

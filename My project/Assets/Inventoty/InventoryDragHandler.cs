@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class InventoryDragHandler : MonoBehaviour, IDropHandler
@@ -17,4 +17,3 @@ public class InventoryDragHandler : MonoBehaviour, IDropHandler
         }
     }
 }
-*/

@@ -13105,6 +13105,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473059836}
   m_CullTransparentMesh: 1
+--- !u!1 &1492893166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492893168}
+  - component: {fileID: 1492893167}
+  m_Layer: 0
+  m_Name: EquipmentUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1492893167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492893166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125e0772e647ab5429b015e3c404cb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+--- !u!4 &1492893168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492893166}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25.35, y: 0, z: 25.53}
+  m_LocalScale: {x: 4.2118583, y: 0.1349868, z: 5.872413}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1500759122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6988620524787208029, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}
@@ -16384,6 +16429,7 @@ GameObject:
   - component: {fileID: 1896227228}
   - component: {fileID: 1896227226}
   - component: {fileID: 1896227227}
+  - component: {fileID: 1896227229}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16510,6 +16556,19 @@ MonoBehaviour:
   scale: {x: 0.2, y: 0.2, z: 0.2}
   equipKey: 282
   unequipKey: 113
+--- !u!114 &1896227229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896227221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36db76b3f20e17b4a9421c6f784b7038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponHolder: {fileID: 251262029}
 --- !u!1 &1905118367
 GameObject:
   m_ObjectHideFlags: 0
@@ -18350,6 +18409,7 @@ SceneRoots:
   - {fileID: 11204528}
   - {fileID: 1507438338}
   - {fileID: 1915143783}
+  - {fileID: 1492893168}
   - {fileID: 1163655756}
   - {fileID: 1700580254}
   - {fileID: 1833388340}
