@@ -15500,6 +15500,70 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541222084}
   m_Mesh: {fileID: 2591943981575976877, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}
+--- !u!1 &1561479257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1561479259}
+  - component: {fileID: 1561479258}
+  m_Layer: 0
+  m_Name: CombineEventBinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1561479258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561479257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 683958de5f0f47d4e8172170ac6010be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipes:
+  - itemA: {fileID: 11400000, guid: ad3e69ab21bf4d74d9cfe4b14e7b0853, type: 2}
+    itemB: {fileID: 11400000, guid: 4ea1495fbf8f78446a43041d780fb218, type: 2}
+    resultItem: {fileID: 11400000, guid: fa351bbee00f34b4691861fdeee5cf1a, type: 2}
+    bonusItems: []
+    onCombined:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1700580250}
+          m_TargetAssemblyTypeName: DateChangeController, Assembly-CSharp
+          m_MethodName: ChangeDateWithFade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &1561479259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561479257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.060913, y: 2.220347, z: 31.07751}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577134804
 GameObject:
   m_ObjectHideFlags: 0
@@ -21205,3 +21269,4 @@ SceneRoots:
   - {fileID: 1123986042}
   - {fileID: 986742334}
   - {fileID: 1714107769}
+  - {fileID: 1561479259}

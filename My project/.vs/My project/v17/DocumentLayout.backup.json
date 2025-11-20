@@ -3,92 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\\u958B\u59CB\u3001\u7D42\u4E86\\hoverunderlinelegacy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u958B\u59CB\u3001\u7D42\u4E86\\hoverunderlinelegacy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\slidedoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\slidedoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Inventoty\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\pickupmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\pickupmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\inventoryslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\inventoryslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\itemdatailpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\itemdatailpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\scripts\\sleepui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sleepui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\datechangecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datechangecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\ui\\outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\outline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\UI\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\daychangedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\daychangedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\combineeventbinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\combineeventbinder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\gameStart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\gameStart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u4F1A\u8A71\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u4F1A\u8A71\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\UI\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\SlideDoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\SlideDoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,265 +46,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdditionalLightsShadowCasterPass.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Runtime\\Passes\\AdditionalLightsShadowCasterPass.cs",
-              "ViewState": "AgIAAHMBAAAAAAAAAAAawKoBAABXAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:24:23.61Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HoverUnderlineLegacy.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
-              "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
-              "RelativeToolTip": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\HoverUnderlineLegacy.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAmwEIAAAAAAAAAAAAAAA==",
+              "Title": "SleepUI.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\SleepUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SleepUI.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\SleepUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SleepUI.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T05:05:52.289Z",
+              "WhenOpened": "2025-11-20T02:20:26.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NewMonoBehaviourScript.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\NewMonoBehaviourScript.cs",
+              "Title": "DateObjectBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T06:06:25.419Z"
+              "WhenOpened": "2025-11-20T02:18:57.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SlideDoor.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\SlideDoor.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\SlideDoor.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvx8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T05:44:39.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NewMonoBehaviourScript.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\NewMonoBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\NewMonoBehaviourScript.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\NewMonoBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\NewMonoBehaviourScript.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T05:43:50.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ItemPickUp.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemPickUp.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\ItemPickUp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T00:48:09.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TextMeshProUGUI.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TextMeshProUGUI.cs",
-              "ViewState": "AgIAAJcHAAAAAAAAAAAlwNQHAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T00:44:33.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InventorySlotUI.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventorySlotUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\InventorySlotUI.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventorySlotUI.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\InventorySlotUI.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAiwFYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T00:32:46.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ItemDatailPanel.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemDatailPanel.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemDatailPanel.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemDatailPanel.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\ItemDatailPanel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:52:10.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PickupMessage.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\PickupMessage.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\PickupMessage.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\PickupMessage.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\PickupMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:41:13.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "DateChangeController.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DateChangeController.cs",
               "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
               "RelativeToolTip": "Assets\\Scripts\\DateChangeController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:32:03.358Z"
+              "WhenOpened": "2025-11-20T02:18:06.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Outline.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\Outline.cs",
-              "RelativeDocumentMoniker": "Assets\\UI\\Outline.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\Outline.cs",
-              "RelativeToolTip": "Assets\\UI\\Outline.cs",
-              "ViewState": "AgIAACwBAAAAAAAAAADwvzUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:15:18.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "NewMonoBehaviourScript1.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript1.cs",
-              "RelativeDocumentMoniker": "Assets\\UI\\NewMonoBehaviourScript1.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript1.cs",
-              "RelativeToolTip": "Assets\\UI\\NewMonoBehaviourScript1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:28:00.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NewMonoBehaviourScript.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript.cs",
-              "RelativeDocumentMoniker": "Assets\\UI\\NewMonoBehaviourScript.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\UI\\NewMonoBehaviourScript.cs",
-              "RelativeToolTip": "Assets\\UI\\NewMonoBehaviourScript.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:26:32.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "quitgame.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
-              "RelativeDocumentMoniker": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
-              "RelativeToolTip": "Assets\\\u958B\u59CB\u3001\u7D42\u4E86\\quitgame.cs",
+              "DocumentIndex": 4,
+              "Title": "DayChangeData.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DayChangeData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DayChangeData.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DayChangeData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DayChangeData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:19:43.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "gameStart.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\gameStart.cs",
-              "RelativeDocumentMoniker": "Assets\\gameStart.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\gameStart.cs",
-              "RelativeToolTip": "Assets\\gameStart.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T05:11:58.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SlideDoor.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\SlideDoor.cs",
-              "RelativeDocumentMoniker": "Assets\\SlideDoor.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\SlideDoor.cs",
-              "RelativeToolTip": "Assets\\SlideDoor.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwBQAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T05:54:06.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Lit.shader",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@39bda2df468a\\Shaders\\Lit.shader",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-10-23T02:23:58.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueManager.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueManager.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAkwKwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T02:24:43.596Z"
+              "WhenOpened": "2025-11-20T02:16:57.106Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DialogueTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
-              "RelativeToolTip": "Assets\\\u4F1A\u8A71\\DialogueTrigger.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAYwEsAAAAAAAAAAAAAAA==",
+              "Title": "Bed.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\Bed.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bed.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\Bed.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bed.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T02:24:19.439Z",
+              "WhenOpened": "2025-11-20T02:16:15.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TMP_Settings.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_Settings.cs",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAYwG4BAAA4AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryManager.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\InventoryManager.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAiwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T04:49:58.108Z"
+              "WhenOpened": "2025-11-20T02:00:39.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TMP_PackageResourceImporter.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@f3fac7af1578\\Runtime\\TMP\\TMP_PackageResourceImporter.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAYwB0AAADZAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CombineEventBinder.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\CombineEventBinder.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\CombineEventBinder.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\CombineEventBinder.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\CombineEventBinder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T04:48:15.681Z"
+              "WhenOpened": "2025-11-20T01:59:34.993Z"
             }
           ]
         }

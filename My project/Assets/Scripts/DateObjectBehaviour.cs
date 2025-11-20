@@ -1,20 +1,24 @@
 using UnityEngine;
+using System.Collections;
 
 public class DateObjectBehaviour : MonoBehaviour
 {
     public Renderer targetRenderer;
     public DayChangeData[] changes;
 
+    private DayChangeData currentData;
+    private Transform player;
+
     void Start()
     {
-        if (GameDateManager.Instance == null)
+        player = GameObject.FindWithTag("Player")?.transform;
+
+        if (GameDateManager.Instance != null)
         {
-            Debug.LogWarning("GameDateManager.Instance is NULL in " + gameObject.name);
-            return;
+            GameDateManager.Instance.OnDateChanged += CheckDate;
         }
 
-        GameDateManager.Instance.OnDateChanged += CheckDate;
-        CheckDate();
+        CheckDate(); // 初回適用
     }
 
     void OnEnable()
@@ -29,26 +33,49 @@ public class DateObjectBehaviour : MonoBehaviour
             GameDateManager.Instance.OnDateChanged -= CheckDate;
     }
 
+    void Update()
+    {
+        if (currentData == null || targetRenderer == null || player == null) return;
+
+        float dist = Vector3.Distance(player.position, transform.position);
+
+        // 範囲内 → distanceTexture
+        if (dist <= currentData.distanceRange && currentData.distanceTexture != null)
+        {
+            targetRenderer.material.mainTexture = currentData.distanceTexture;
+        }
+        // 範囲外 → newTexture
+        else if (currentData.newTexture != null)
+        {
+            targetRenderer.material.mainTexture = currentData.newTexture;
+        }
+    }
+
+    // ---------------------
+    // 日付が変わった時の処理
+    // ---------------------
     void CheckDate()
     {
-        Debug.Log($"[{gameObject.name}] CheckDate called. Current day: {GameDateManager.Instance.day}");
+        int day = GameDateManager.Instance.day;
+        currentData = null;
 
-        foreach (var change in changes)
+        foreach (var c in changes)
         {
-            Debug.Log($"Comparing: change.day={change.day}, current day={GameDateManager.Instance.day}");
-
-            if (change.day == GameDateManager.Instance.day)
+            if (c.day == day)
             {
-                Debug.Log("Applying change for day " + change.day + " on object " + gameObject.name);
+                currentData = c;
 
-                transform.position = change.newPosition;
-                gameObject.SetActive(change.active);
+                // 位置変更
+                transform.position = c.newPosition;
 
-                if (targetRenderer != null && change.newTexture != null)
-                {
-                    targetRenderer.material.mainTexture = change.newTexture;
-                    Debug.Log("Texture changed on object " + gameObject.name);
-                }
+                // オブジェクトON/OFF
+                gameObject.SetActive(c.active);
+
+                // 初期テクスチャー（通常の）
+                if (targetRenderer != null && c.newTexture != null)
+                    targetRenderer.material.mainTexture = c.newTexture;
+
+                break;
             }
         }
     }

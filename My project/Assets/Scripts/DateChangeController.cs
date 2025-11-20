@@ -10,10 +10,10 @@ public class DateChangeController : MonoBehaviour
     public float fadeDuration = 1f;   // フェード時間
 
     [Header("日付テキスト（どちらか使用）")]
-    public TextMeshProUGUI dateText_TMP;  // TextMeshPro 用
-    public Text dateText_Legacy;          // レガシーUI用
+    public TextMeshProUGUI dateText_TMP;
+    public Text dateText_Legacy;
 
-    // 日付変更を開始（ボタンなどから呼ぶ）
+    // ボタンから呼ばれる
     public void ChangeDateWithFade()
     {
         StartCoroutine(FadeAndChangeDateRoutine());
@@ -21,13 +21,16 @@ public class DateChangeController : MonoBehaviour
 
     private IEnumerator FadeAndChangeDateRoutine()
     {
-        // フェードアウト
+        // ★ フェードアウト（画面を暗くする）
         yield return StartCoroutine(Fade(0f, 1f));
 
-        // 日付を進める
+        // ★ 日付を進める
         GameDateManager.Instance.NextDay();
 
-        // 現在の日付を取得して表示
+        // ★ ここで全 DateObjectBehaviour が正しく日付イベントを受け取る
+        yield return null; // 1フレーム待つ（非常に重要）
+
+        // ★ 日付をUIに表示
         int currentDay = GameDateManager.Instance.day;
         string displayText = currentDay + "日目";
 
@@ -43,12 +46,13 @@ public class DateChangeController : MonoBehaviour
             dateText_Legacy.enabled = true;
         }
 
-        // 1秒表示
+        // 日付表示を 1 秒キープ
         yield return new WaitForSeconds(1f);
 
-        // フェードイン
+        // ★ フェードイン（画面明るく）
         yield return StartCoroutine(Fade(1f, 0f));
 
+        // テキストを非表示
         if (dateText_TMP != null)
             dateText_TMP.enabled = false;
 
@@ -56,6 +60,7 @@ public class DateChangeController : MonoBehaviour
             dateText_Legacy.enabled = false;
     }
 
+    // フェード処理
     private IEnumerator Fade(float startAlpha, float endAlpha)
     {
         float t = 0f;
