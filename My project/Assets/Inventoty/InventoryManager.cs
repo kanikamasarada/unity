@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
 
     private bool isOpen = false;
     public bool IsOpen => isOpen;
+    public bool IsDragging { get; set; }
 
     public ItemData LastSelectedItem { get; private set; }
 
@@ -102,70 +103,70 @@ public class InventoryManager : MonoBehaviour
     // =============================================================
     // 合成処理（ドラッグ時に呼ばれる）
     // =============================================================
-    public void TryCombineItems(InventorySlotUI slotA, InventorySlotUI slotB)
+public void TryCombineItems(InventorySlotUI slotA, InventorySlotUI slotB)
+{
+    if (slotA == null || slotB == null) return;
+
+    ItemData itemA = slotA.GetCurrentItem();
+    ItemData itemB = slotB.GetCurrentItem();
+    if (itemA == null || itemB == null) return;
+
+    var key1 = (itemA.itemName, itemB.itemName);
+    var key2 = (itemB.itemName, itemA.itemName);
+
+    ItemData result = null;
+    UnityEvent evt = null;
+    ItemData[] bonus = null;
+
+    if (dynamicComboTable.TryGetValue(key1, out result))
     {
-        if (slotA == null || slotB == null) return;
-
-        ItemData itemA = slotA.GetCurrentItem();
-        ItemData itemB = slotB.GetCurrentItem();
-
-        if (itemA == null || itemB == null) return;
-
-        var key = (itemA.itemName, itemB.itemName);
-
-        // ① インスペクター設定レシピ
-        if (dynamicComboTable.TryGetValue(key, out ItemData result))
-        {
-            Debug.Log($"合成成功（インスペクター設定）: {itemA.itemName} + {itemB.itemName}");
-
-            if (dynamicEventTable.TryGetValue(key, out UnityEvent evt))
-            {
-                evt.Invoke();
-                Debug.Log("合成イベント実行");
-            }
-
-            // ★合成後アイテムなし → 消去 + 追加アイテム処理
-            if (result == null)
-            {
-                slotA.SetItem(null);
-                slotB.SetItem(null);
-                inventoryUI.RemoveEmptySlots();
-                Debug.Log("結果アイテム無し → 消去型合成");
-
-                // ★追加アイテム付与
-                if (bonusItemTable.TryGetValue(key, out ItemData[] bonus)
-                    && bonus != null && bonus.Length > 0)
-                {
-                    foreach (var item in bonus)
-                    {
-                        AddItem(item);
-                        Debug.Log($"追加アイテム：{item.itemName}");
-                    }
-                }
-                return;
-            }
-
-            // ★通常合成
-            slotA.SetItem(null);
-            slotB.SetItem(result);
-            inventoryUI.RemoveEmptySlots();
-            return;
-        }
-
-        // ② 旧 comboTable（任意で残す）
-        if (comboTable.TryGetValue(key, out ItemData resultItem))
-        {
-            Debug.Log($"合成成功（旧）: {itemA.itemName} + {itemB.itemName} → {resultItem.itemName}");
-
-            slotA.SetItem(null);
-            slotB.SetItem(resultItem);
-            inventoryUI.RemoveEmptySlots();
-            return;
-        }
-
-        Debug.Log("✖ この組み合わせは合成できません");
+        dynamicEventTable.TryGetValue(key1, out evt);
+        bonusItemTable.TryGetValue(key1, out bonus);
+    }
+    else if (dynamicComboTable.TryGetValue(key2, out result))
+    {
+        dynamicEventTable.TryGetValue(key2, out evt);
+        bonusItemTable.TryGetValue(key2, out bonus);
     }
 
+    if (result != null || bonus != null || evt != null)
+    {
+        Debug.Log($"合成成功: {itemA.itemName} + {itemB.itemName}");
+
+        evt?.Invoke();
+
+        if (result == null)
+        {
+            slotA.SetItem(null);
+            slotB.SetItem(null);
+        }
+        else
+        {
+            slotA.SetItem(null);
+            slotB.SetItem(result);
+        }
+
+        if (bonus != null)
+        {
+            foreach (var item in bonus) AddItem(item);
+        }
+
+        inventoryUI.RemoveEmptySlots();
+        return;
+    }
+
+    // 旧 comboTable
+    if (comboTable.TryGetValue(key1, out result) || comboTable.TryGetValue(key2, out result))
+    {
+        slotA.SetItem(null);
+        slotB.SetItem(result);
+        inventoryUI.RemoveEmptySlots();
+        Debug.Log($"合成成功（旧）: {itemA.itemName} + {itemB.itemName} → {result.itemName}");
+        return;
+    }
+
+    Debug.Log("✖ この組み合わせは合成できません");
+}
     public void PickupItem(ItemData item)
     {
         if (item == null) return;

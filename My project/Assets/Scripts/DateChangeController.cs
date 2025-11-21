@@ -22,6 +22,8 @@ public class DateChangeController : MonoBehaviour
     public void ChangeDateWithFade()
     {
         StartCoroutine(FadeAndChangeDateRoutine(null));
+        Debug.Log($"Fog変更関数が実行！ 現在:{RenderSettings.fogDensity}");
+
     }
 
     // コールバック付きで呼ぶ場合

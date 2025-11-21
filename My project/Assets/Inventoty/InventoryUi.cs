@@ -78,12 +78,14 @@ public class InventoryUI : MonoBehaviour
     // 空スロットをリストの後ろに回して並び替える
 public void RemoveEmptySlots()
 {
-    // スロット一覧が存在しない場合は何もしない
+    // ★ドラッグ中は実行しない
+    if (InventoryManager.Instance != null && InventoryManager.Instance.IsDragging)
+        return;
+
     if (slots == null || slots.Count == 0) return;
 
     List<ItemData> items = new List<ItemData>();
 
-    // まず埋まってるアイテムだけ回収
     foreach (var slot in slots)
     {
         ItemData item = slot.GetCurrentItem();
@@ -91,17 +93,16 @@ public void RemoveEmptySlots()
             items.Add(item);
     }
 
-    // いったん全スロットを空にする
     foreach (var slot in slots)
     {
         slot.SetItem(null);
     }
 
-    // 前から順にアイテムを入れ直す
     for (int i = 0; i < items.Count; i++)
     {
         slots[i].SetItem(items[i]);
     }
 }
+
 
 }

@@ -61,19 +61,19 @@ private void OnSleepClicked()
     {
         if (!RenderSettings.fog)
         {
-            Debug.LogWarning("Fog が OFF のため density は変更されません！");
-            return;
+        Debug.LogWarning("Fog が OFF のため density は変更されません！");
+        return;
         }
 
-        float density = RenderSettings.fogDensity;
+    float density = RenderSettings.fogDensity;
 
         density += fogDensityIncrease;
 
-        // 上限を軽く設定（濃すぎて真っ白にならないように）
-        density = Mathf.Clamp(density, 0f, 0.1f);
+    // 上限を 0.3 に変更（必要ならもっと上げてもOK）
+        density = Mathf.Clamp(density, 0f, 1f);
 
-        RenderSettings.fogDensity = density;
+    RenderSettings.fogDensity = density;
 
-        Debug.Log($"Fog density 増加 → 現在: {density}");
-    }
+    Debug.Log($"Fog density 増加 → 現在: {density}");
+}
 }
