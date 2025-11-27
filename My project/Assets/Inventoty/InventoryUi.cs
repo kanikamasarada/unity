@@ -6,55 +6,25 @@ public class InventoryUI : MonoBehaviour
     [Header("スロットをまとめる親")]
     public Transform itemSlotsParent;
 
-    [Header("スロットプレハブ（最初に非表示で置いておく）")]
+    [Header("スロットプレハブ")]
     public GameObject itemSlotPrefab;
 
     private List<InventorySlotUI> slots = new List<InventorySlotUI>();
 
     void Awake()
     {
-        // プレハブを非表示にする
-        if (itemSlotPrefab != null)
+        if (itemSlotPrefab != null && itemSlotPrefab.activeSelf)
             itemSlotPrefab.SetActive(false);
-
-        // 🔥 ここが重要：親の子供ぶんだけスロットを作成して並べる
-        InitializeFixedSlots();
     }
 
-    private void InitializeFixedSlots()
-    {
-        if (itemSlotsParent == null || itemSlotPrefab == null)
-        {
-            Debug.LogError("❌ itemSlotPrefab または itemSlotsParent が未設定");
-            return;
-        }
-
-        // すでに子がある場合 → 削除（念のため）
-        foreach (Transform child in itemSlotsParent)
-        {
-            if (child != itemSlotPrefab.transform)
-                Destroy(child.gameObject);
-        }
-
-        // 🔥 例えば 12 マス作りたい場合 → 子供の数で調整可能
-        int slotCount = 12;
-
-        for (int i = 0; i < slotCount; i++)
-        {
-            GameObject slotObj = Instantiate(itemSlotPrefab, itemSlotsParent);
-            slotObj.SetActive(true);
-
-            var slotUI = slotObj.GetComponent<InventorySlotUI>();
-            slotUI.SetItem(null);
-            slots.Add(slotUI);
-        }
-    }
-
-    // ---------- アイテムを追加（固定スロット版） ----------
+    // ============================================================
+    // アイテム追加
+    // ============================================================
     public void AddItem(ItemData item)
     {
         if (item == null) return;
 
+        // 空きスロットに入れる
         foreach (var slot in slots)
         {
             if (!slot.HasItem())
@@ -64,45 +34,88 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        Debug.Log("⚠ インベントリがいっぱいです");
+        // 空きがなければ新規スロット生成
+        if (itemSlotPrefab != null && itemSlotsParent != null)
+        {
+            GameObject newSlotObj = Instantiate(itemSlotPrefab, itemSlotsParent);
+            newSlotObj.SetActive(true);
+            var slotUI = newSlotObj.GetComponent<InventorySlotUI>();
+            slotUI.SetItem(item);
+            slots.Add(slotUI);
+        }
+        else
+        {
+            Debug.LogError("❌ itemSlotPrefab または itemSlotsParent が未設定です");
+        }
     }
 
-    // ---------- 全クリア ----------
+    // ============================================================
+    // 空のスロットを削除（合成後に実行）
+    // ============================================================
+    public void RemoveEmptySlots()
+    {
+        List<InventorySlotUI> removeList = new List<InventorySlotUI>();
+
+        foreach (var slot in slots)
+        {
+            if (!slot.HasItem())
+            {
+                removeList.Add(slot);
+            }
+        }
+
+        // 実際に破棄
+        foreach (var slot in removeList)
+        {
+            slots.Remove(slot);
+            Destroy(slot.gameObject);
+        }
+    }
+
+    // ============================================================
+    // 指定アイテムを削除（InventoryManager → UI）
+    // ============================================================
+    public void RemoveItem(ItemData item)
+    {
+        foreach (var slot in slots)
+        {
+            if (slot.HasItem() && slot.GetCurrentItem() == item)
+            {
+                slot.SetItem(null);
+                RemoveEmptySlots();
+                return;
+            }
+        }
+    }
+
+    // ============================================================
+    // 全スロットを指定アイテムリストで再構築（同期）
+    // ============================================================
+    public void Refresh(List<ItemData> allItems)
+    {
+        // すべて削除
+        foreach (var slot in slots)
+            Destroy(slot.gameObject);
+
+        slots.Clear();
+
+        // 現在のアイテムリストで作り直し
+        foreach (var item in allItems)
+            AddItem(item);
+    }
+
+    // ============================================================
+    // すべて空にする（使わなくてもOK）
+    // ============================================================
     public void ClearAllSlots()
     {
         foreach (var slot in slots)
         {
             slot.SetItem(null);
         }
-    }
-    // 空スロットをリストの後ろに回して並び替える
-public void RemoveEmptySlots()
-{
-    // ★ドラッグ中は実行しない
-    if (InventoryManager.Instance != null && InventoryManager.Instance.IsDragging)
-        return;
-
-    if (slots == null || slots.Count == 0) return;
-
-    List<ItemData> items = new List<ItemData>();
-
-    foreach (var slot in slots)
-    {
-        ItemData item = slot.GetCurrentItem();
-        if (item != null)
-            items.Add(item);
+        RemoveEmptySlots();
     }
 
-    foreach (var slot in slots)
-    {
-        slot.SetItem(null);
-    }
-
-    for (int i = 0; i < items.Count; i++)
-    {
-        slots[i].SetItem(items[i]);
-    }
-}
-
-
+    // （任意）外部アクセス用
+    public List<InventorySlotUI> GetAllSlots() => slots;
 }

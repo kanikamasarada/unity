@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kanaduti
   m_EditorClassIdentifier: 
   itemName: kanaduti
-  icon: {fileID: 21300000, guid: a46ce1bb2cea281448fa0b42532e1244, type: 3}
+  icon: {fileID: 21300000, guid: a566bb7d5829296438701280959d619b, type: 3}
   description: "\u30CF\u30F3\u30DE\u30FC"
   worldPrefab: {fileID: 3939850679074068360, guid: 6978ed54c29da5c4ea86a3e5fec5cca5, type: 3}
   worldRotationOffset: {x: 0, y: 0, z: 0}

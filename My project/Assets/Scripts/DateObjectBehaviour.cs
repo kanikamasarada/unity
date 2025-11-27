@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class DateObjectBehaviour : MonoBehaviour
 {
@@ -9,16 +8,37 @@ public class DateObjectBehaviour : MonoBehaviour
     private DayChangeData currentData;
     private Transform player;
 
+    // -----------------------------
+    // ★★ 追加機能：インタラクト設定 ★★
+    // -----------------------------
+    [Header("インタラクト設定（追加機能）")]
+    public bool enableInteract = false;
+
+    [Tooltip("Eキーで消去する対象オブジェクト")]
+    public GameObject destroyTarget;
+
+    [Tooltip("Eキーで生成するプレハブ（未設定なら消去のみ）")]
+    public GameObject spawnPrefab;
+
+    [Tooltip("生成位置（未設定ならこのオブジェクトの位置）")]
+    public Transform spawnPoint;
+
+    [Tooltip("インタラクトに必要なアイテム")]
+    public ItemData[] requiredItems;
+
+    [Tooltip("Eキーで判定する距離（0なら distanceRange を使用）")]
+    public float interactDistance = 0f;
+    // -----------------------------
+
+
     void Start()
     {
         player = GameObject.FindWithTag("Player")?.transform;
 
         if (GameDateManager.Instance != null)
-        {
             GameDateManager.Instance.OnDateChanged += CheckDate;
-        }
 
-        CheckDate(); // 初回適用
+        CheckDate(); // 初回適用（changes を使わない場合は currentData = null のままになる）
     }
 
     void OnEnable()
@@ -35,29 +55,39 @@ public class DateObjectBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (currentData == null || targetRenderer == null || player == null) return;
+        if (player == null) return;
 
         float dist = Vector3.Distance(player.position, transform.position);
 
-        // 範囲内 → distanceTexture
-        if (dist <= currentData.distanceRange && currentData.distanceTexture != null)
+        // ------------------------------------------
+        // ★★ 日付と関係ある部分（既存機能） ★★
+        // ------------------------------------------
+        if (currentData != null && targetRenderer != null)
         {
-            targetRenderer.material.mainTexture = currentData.distanceTexture;
+            if (dist <= currentData.distanceRange && currentData.distanceTexture != null)
+                targetRenderer.material.mainTexture = currentData.distanceTexture;
+            else if (currentData.newTexture != null)
+                targetRenderer.material.mainTexture = currentData.newTexture;
         }
-        // 範囲外 → newTexture
-        else if (currentData.newTexture != null)
-        {
-            targetRenderer.material.mainTexture = currentData.newTexture;
-        }
+
+        // ------------------------------------------
+        // ★★ 日付と関係ない「追加機能」 ★★
+        // ------------------------------------------
+        if (enableInteract)
+            CheckInteract(dist);
     }
 
-    // ---------------------
-    // 日付が変わった時の処理
-    // ---------------------
+
+    // ======================================================
+    // 日付が変わった時の処理（変更なし）
+    // ======================================================
     void CheckDate()
     {
-        int day = GameDateManager.Instance.day;
         currentData = null;
+
+        if (GameDateManager.Instance == null || changes == null) return;
+
+        int day = GameDateManager.Instance.day;
 
         foreach (var c in changes)
         {
@@ -65,18 +95,69 @@ public class DateObjectBehaviour : MonoBehaviour
             {
                 currentData = c;
 
-                // 位置変更
                 transform.position = c.newPosition;
-
-                // オブジェクトON/OFF
                 gameObject.SetActive(c.active);
 
-                // 初期テクスチャー（通常の）
                 if (targetRenderer != null && c.newTexture != null)
                     targetRenderer.material.mainTexture = c.newTexture;
 
                 break;
             }
+        }
+    }
+
+
+    // ======================================================
+    // ★ 追加機能：距離内＆アイテム所持 & Eキー → 消去 / 消去+生成
+    // ======================================================
+    void CheckInteract(float currentDistance)
+    {
+        var inv = InventoryManager.Instance;
+        if (inv == null) return;
+
+        // 判定距離（設定されてなければ 2m）
+        float range =
+            (interactDistance > 0f)
+            ? interactDistance
+            : currentData != null ? currentData.distanceRange : 2f;
+
+        if (currentDistance > range) return;
+
+        // Eキー押し
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+
+        // --- 必要アイテムチェック ---
+        foreach (var item in requiredItems)
+        {
+            if (!inv.HasItem(item))
+            {
+                Debug.Log("必要アイテムが不足 → 実行不可: " + item.itemName);
+                return;
+            }
+        }
+
+        // --- アイテム消費 ---
+        if (!inv.TryConsumeItems(requiredItems))
+        {
+            Debug.Log("アイテム消費に失敗");
+            return;
+        }
+
+        // ======== ここから メイン処理 ========
+
+        // --- ターゲット消去（必ず実行）---
+        if (destroyTarget != null)
+        {
+            Destroy(destroyTarget);
+            Debug.Log("指定オブジェクトを消去: " + destroyTarget.name);
+        }
+
+        // --- 新オブジェクト生成（未指定ならスキップしてOK）---
+        if (spawnPrefab != null)
+        {
+            Vector3 pos = (spawnPoint != null) ? spawnPoint.position : transform.position;
+            Instantiate(spawnPrefab, pos, Quaternion.identity);
+            Debug.Log("新オブジェクト生成: " + spawnPrefab.name);
         }
     }
 }

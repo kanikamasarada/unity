@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kagi
   m_EditorClassIdentifier: 
   itemName: kagi
-  icon: {fileID: 21300000, guid: 46649bcc6f2ae5842bf0c83d4e619171, type: 3}
+  icon: {fileID: 21300000, guid: 5f3ee9410cae5d24489a7dd98122b270, type: 3}
   description: "\u9375"
   worldPrefab: {fileID: 9000368826627040996, guid: b6fb12c2664806c468a576a65ba9aa89, type: 3}
   worldRotationOffset: {x: 0, y: 0, z: 0}
