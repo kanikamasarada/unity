@@ -55,7 +55,7 @@ public class DateChangeController : MonoBehaviour
 
         // 日付テキスト更新＆表示
         int currentDay = (GameDateManager.Instance != null) ? GameDateManager.Instance.day : 0;
-        string displayText = currentDay + "日目";
+            string displayText = currentDay + "日目";
 
         if (dateText_TMP != null)
         {

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: "\u305B\u3063\u3051\u3093"
   icon: {fileID: 0}
   description: 
-  worldPrefab: {fileID: 919132149155446097, guid: 598828d7f7c2c5042b528f6cb4c71bb4, type: 3}
+  worldPrefab: {fileID: 0}
   worldRotationOffset: {x: 0.5, y: -3, z: 1}
   worldPositionOffset: {x: 0, y: 0, z: 0}
   worldScale: {x: 1, y: 1, z: 1}

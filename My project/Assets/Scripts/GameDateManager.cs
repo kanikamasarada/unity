@@ -17,9 +17,13 @@ public class GameDateManager : MonoBehaviour
     // 日付を1日進める
     public void NextDay()
     {
-        day++;
-        Debug.Log($"現在日付: Day {day}");
-        Debug.Log("OnDateChanged イベントを発火します");
-        OnDateChanged?.Invoke();
-    }
+       
+                day++;
+                //Debug.Log($"現在日付: Day {day}");
+                //Debug.Log("OnDateChanged イベントを発火します");
+                OnDateChanged?.Invoke();
+          
+        }
+        
+        
 }
