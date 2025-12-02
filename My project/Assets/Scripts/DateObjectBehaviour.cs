@@ -110,6 +110,9 @@ public class DateObjectBehaviour : MonoBehaviour
     // ======================================================
     // ★ 追加機能：距離内＆アイテム所持 & Eキー → 消去 / 消去+生成
     // ======================================================
+    // ======================================================
+    // ★ 追加機能：距離内＆アイテム所持 & Eキー → 消去 / 消去+生成
+    // ======================================================
     void CheckInteract(float currentDistance)
     {
         var inv = InventoryManager.Instance;
@@ -126,7 +129,7 @@ public class DateObjectBehaviour : MonoBehaviour
         // Eキー押し
         if (!Input.GetKeyDown(KeyCode.E)) return;
 
-        // --- 必要アイテムチェック ---
+        // --- 必要アイテムチェック（消費しない）---
         foreach (var item in requiredItems)
         {
             if (!inv.HasItem(item))
@@ -134,13 +137,6 @@ public class DateObjectBehaviour : MonoBehaviour
                 Debug.Log("必要アイテムが不足 → 実行不可: " + item.itemName);
                 return;
             }
-        }
-
-        // --- アイテム消費 ---
-        if (!inv.TryConsumeItems(requiredItems))
-        {
-            Debug.Log("アイテム消費に失敗");
-            return;
         }
 
         // ======== ここから メイン処理 ========
@@ -152,7 +148,7 @@ public class DateObjectBehaviour : MonoBehaviour
             Debug.Log("指定オブジェクトを消去: " + destroyTarget.name);
         }
 
-        // --- 新オブジェクト生成（未指定ならスキップしてOK）---
+        // --- 新オブジェクト生成（未指定ならスキップ）---
         if (spawnPrefab != null)
         {
             Vector3 pos = (spawnPoint != null) ? spawnPoint.position : transform.position;
@@ -161,3 +157,4 @@ public class DateObjectBehaviour : MonoBehaviour
         }
     }
 }
+
