@@ -5,6 +5,12 @@ public class ItemData : ScriptableObject
 {
     public string itemName;
     public Sprite icon;
+    [Header("ライト設定")]
+    public float lightRange = 4f;
+    public float lightIntensity = 2f;
+    public GameObject flamePrefab;
+
+    public Color lightColor = Color.white;
     [TextArea]
     public string description;
     public GameObject worldPrefab;

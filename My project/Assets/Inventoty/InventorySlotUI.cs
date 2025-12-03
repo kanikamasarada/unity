@@ -39,18 +39,16 @@ public class InventorySlotUI : MonoBehaviour
 
     public ItemData GetCurrentItem() => currentItem;
 
-    private void OnClick()
-    {
-        if(currentItem == null) return;
+private void OnClick()
+{
+    if(currentItem == null) return;
 
-        ItemDetailPanel.Instance?.ShowItem(currentItem);
-        InventoryManager.Instance?.SetLastSelectedItem(currentItem);
+    // UI だけ反映
+    ItemDetailPanel.Instance?.ShowItem(currentItem);
+    InventoryManager.Instance?.SetLastSelectedItem(currentItem);
 
-        // 装備反映
-        var playerEquip = FindFirstObjectByType<PlayerEquipment>();
-        if(playerEquip != null)
-        {
-            playerEquip.Equip(currentItem);
-        }
-    }
+    // 装備はここで一括管理
+    EquipmentUI.Instance?.SetEquippedItem(currentItem);
+    PlayerEquipmentUIConnector.Instance?.EquipFromUI(currentItem);
+}
 }
