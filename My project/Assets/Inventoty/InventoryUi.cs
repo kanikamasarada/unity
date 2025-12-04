@@ -68,14 +68,17 @@ public class InventoryUI : MonoBehaviour
     }
     public void Refresh(List<ItemData> allItems)
     {
-        // すべて削除
+        // まず全部クリア
         foreach (var slot in slots)
-            Destroy(slot.gameObject);
-        slots.Clear();
-        // 現在のアイテムリストで作り直し
-        foreach (var item in allItems)
-            AddItem(item);
+            slot.SetItem(null);
+
+        // アイテムを順番に配置
+        for (int i = 0; i < allItems.Count && i < slots.Count; i++)
+        {
+            slots[i].SetItem(allItems[i]);
+        }
     }
+
 
     // ---------- 全クリア ----------
     public void ClearAllSlots()

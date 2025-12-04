@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\inventoty\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\npc\u7BA1\u7406\\enemyai_advanced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\u7BA1\u7406\\enemyai_advanced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\datechangecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datechangecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\gamedatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamedatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,52 +39,60 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InventoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryManager.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\InventoryManager.cs",
-              "ViewState": "AgIAAPUAAAAAAAAAAAAiwAwBAAAAAAAAAAAAAA==",
+              "Title": "EnemyAI_Advanced.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAcwJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T02:08:53.941Z",
+              "WhenOpened": "2025-12-04T06:37:14.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DateChangeController.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DateChangeController.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateChangeController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DateChangeController.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAowMwAAAAAAAAAAAAAAA==",
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Enemy.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T04:58:35.776Z"
+              "WhenOpened": "2025-12-04T06:36:38.149Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GameDateManager.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\GameDateManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameDateManager.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\GameDateManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameDateManager.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBgAAAAKAAAAAAAAAA==",
+              "Title": "NewMonoBehaviourScript1.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T04:46:10.756Z"
+              "WhenOpened": "2025-12-04T06:35:32.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewMonoBehaviourScript.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T06:34:25.837Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DateObjectBehaviour.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAABFwJ8AAAAAAAAAAAAAAA==",
+              "Title": "EventCountdown.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
+              "RelativeDocumentMoniker": "Assets\\EventCountdown.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
+              "RelativeToolTip": "Assets\\EventCountdown.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T05:57:53.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T05:32:45.069Z"
             }
           ]
         }

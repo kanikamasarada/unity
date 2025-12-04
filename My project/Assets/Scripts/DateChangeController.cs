@@ -93,9 +93,9 @@ public class DateChangeController : MonoBehaviour
     {
         int current = GameDateManager.Instance?.day ?? 1;
 
-        if (current >= 5)
+        if (current >= 4)
         {
-            Debug.Log("5日目以降は寝れません！");
+            Debug.Log("4日目以降は寝れません！");
             return false;
         }
 

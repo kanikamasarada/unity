@@ -99,7 +99,9 @@ public class InteractEventTrigger : MonoBehaviour
         // 報酬アイテム追加
         foreach (var item in rewardItems)
         {
+           
             inv.AddItem(item);
+            Debug.Log("あ");
         }
 
         Debug.Log("初回インタラクト完了 → アイテム更新＆イベント切替完了");

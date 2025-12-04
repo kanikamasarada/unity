@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class SlideDoor : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class SlideDoor : MonoBehaviour
     private Vector3 openPosition;
     private bool isOpen = false;
     private Transform player;
+    public AudioSource sound_effect_open;
+    public AudioSource sound_effect_close;
+    private bool isMoving = false;
     void Start()
     {
         closedPosition = transform.position;
@@ -25,14 +29,28 @@ public class SlideDoor : MonoBehaviour
         // プレイヤーとの距離をチェック
         float distance = Vector3.Distance(transform.position, player.position);
         // 距離内ならEキーで開閉
-        if (distance < triggerDistance && Input.GetKeyDown(KeyCode.E))
+        if (!isMoving && distance < triggerDistance && Input.GetKeyDown(KeyCode.E))
         {
             isOpen = !isOpen;
+            isMoving = true;
+            if (isOpen)
+            {
+                sound_effect_open.pitch = 1.3f;
+                sound_effect_open.Play();
+            }
+            else
+            {
+                sound_effect_close.Play();
+            }
             //*FindFirstObjectByType<GameManager>().AddPoints("扉を開けた");
             //Debug.Log("ドアを開けた！");
         }
         // ドアの移動
         Vector3 targetPos = isOpen ? openPosition : closedPosition;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        if (transform.position == targetPos && isMoving)
+        {
+            isMoving = false;
+        }
     }
 }

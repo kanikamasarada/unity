@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
-  m_Name: "\u304F\u307E\u306E\u306C\u3044\u3050\u308B\u307F"
+  m_Name: "\u30AF\u30A8\u30F3\u9178"
   m_EditorClassIdentifier: 
-  itemName: "\u304F\u307E\u306E\u306C\u3044\u3050\u308B\u307F"
+  itemName: "\u30AF\u30A8\u30F3\u9178"
   icon: {fileID: 21300000, guid: d09c3f61ddc6e7d42a083c6df2bc2644, type: 3}
-  lightRange: 2
+  lightRange: 4
   lightIntensity: 2
   flamePrefab: {fileID: 0}
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   description: 
-  worldPrefab: {fileID: 919132149155446097, guid: 599fb4391311c0d44a6f83182ecd9066, type: 3}
-  worldRotationOffset: {x: 0.5, y: -3, z: 1}
+  worldPrefab: {fileID: 8146634362038379166, guid: c683a7b35b3a7dc46ae74c035d377150, type: 3}
+  worldRotationOffset: {x: 0, y: 0, z: 0}
   worldPositionOffset: {x: 0, y: 0, z: 0}
-  worldScale: {x: 0.5, y: 0.5, z: 0.5}
+  worldScale: {x: 1, y: 1, z: 1}

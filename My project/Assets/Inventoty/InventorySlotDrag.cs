@@ -6,50 +6,54 @@ using UnityEngine.UI;
 public class InventorySlotDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private InventorySlotUI thisSlot;
-    private RectTransform rect;
     private Vector3 originalPosition;
 
     public Image iconImage;
 
-    void Awake()
+    private Canvas canvas;
+
+    private void Awake()
     {
         thisSlot = GetComponent<InventorySlotUI>();
-        rect = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
+
+        if (canvas == null)
+            Debug.LogError("Canvas が見つかりません (InventorySlotDrag)");
 
         if (iconImage == null && thisSlot != null)
             iconImage = thisSlot.iconImage;
-
-        if (iconImage == null)
-            Debug.LogError("InventorySlotDrag: iconImage が見つかりません！");
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (thisSlot == null || thisSlot.currentItem == null) return;
 
-        originalPosition = iconImage.transform.localPosition;
+        originalPosition = iconImage.rectTransform.localPosition;
+
+        // ドラッグ中は最前面に
+        iconImage.transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (thisSlot.currentItem == null) return;
 
-        Vector2 pos;
+        // Overlay ならそのままスクリーン座標をローカル座標へ変換するだけで OK
+        Vector2 localPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            rect.parent as RectTransform,
+            canvas.transform as RectTransform,
             eventData.position,
-            eventData.pressEventCamera,
-            out pos
+            null, // Overlay → Camera は null
+            out localPos
         );
 
-        iconImage.rectTransform.localPosition = pos;
+        iconImage.rectTransform.localPosition = localPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (thisSlot.currentItem == null) return;
 
-        // ドロップ先スロットを取得
         GameObject targetObj = eventData.pointerCurrentRaycast.gameObject;
         if (targetObj != null)
         {
@@ -63,7 +67,6 @@ public class InventorySlotDrag : MonoBehaviour, IBeginDragHandler, IDragHandler,
             }
         }
 
-        // 合成されなかった場合は元の位置に戻す
-        iconImage.transform.localPosition = originalPosition;
+        iconImage.rectTransform.localPosition = originalPosition;
     }
 }
