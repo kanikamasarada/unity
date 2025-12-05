@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\npc\u7BA1\u7406\\enemyai_advanced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\u7BA1\u7406\\enemyai_advanced.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\npc\u7BA1\u7406\\enemysoundhunter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\npc\u7BA1\u7406\\enemysoundhunter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\playerequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\playerequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\assetspausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\assetspausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\gamedatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamedatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\player\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\Enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +58,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnemyAI_Advanced.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
-              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
-              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\EnemyAI_Advanced.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAcwJ8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PlayerEquipment.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\PlayerEquipment.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\PlayerEquipment.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\PlayerEquipment.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\PlayerEquipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T06:37:14.092Z",
+              "WhenOpened": "2025-12-05T02:59:07.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemySoundHunter.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemySoundHunter.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\EnemySoundHunter.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemySoundHunter.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\EnemySoundHunter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T01:23:48.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Player\\PlayerMovement.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwDIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T01:00:28.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MouseLook.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\MouseLook.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\MouseLook.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\MouseLook.cs",
+              "RelativeToolTip": "Assets\\Player\\MouseLook.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T00:51:29.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy.cs",
@@ -62,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "NewMonoBehaviourScript1.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript1.cs",
@@ -73,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\NewMonoBehaviourScript.cs",
@@ -84,15 +141,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EventCountdown.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
               "RelativeDocumentMoniker": "Assets\\EventCountdown.cs",
               "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
               "RelativeToolTip": "Assets\\EventCountdown.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAcwKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T05:32:45.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetsPauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAcwKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T02:07:19.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameDateManager.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\GameDateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameDateManager.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\GameDateManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameDateManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T01:36:53.948Z"
             }
           ]
         }

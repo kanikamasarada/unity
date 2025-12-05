@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EventCountdown : MonoBehaviour
 {
@@ -34,28 +34,21 @@ public class EventCountdown : MonoBehaviour
 
     void Start()
     {
-        // カウントダウン UI は最初は非表示
         if (countdownUI != null)
             countdownUI.SetActive(false);
 
-        // 終了パネルも非表示
         if (finishPanel != null)
             finishPanel.SetActive(false);
 
-        // タイトルへ戻るボタン
         if (toTitleButton != null)
             toTitleButton.onClick.AddListener(OnClickReturnTitle);
 
-        // 赤フェード初期化
         if (redOverlay != null)
         {
             Color c = redOverlay.color;
             c.a = 0f;
             redOverlay.color = c;
         }
-
-        // カウントダウン自動スタート
-        StartCountdown();
     }
 
     public void StartCountdown()
@@ -114,19 +107,54 @@ public class EventCountdown : MonoBehaviour
         if (finishSE != null && audioSource != null)
             audioSource.PlayOneShot(finishSE);
 
-        // ここ！！パネルを確実に表示
+        // ----------- パネル表示 ----------- //
         if (finishPanel != null)
             finishPanel.SetActive(true);
 
-        isRunning = false;
+        // ----------- カウントダウン UI を非表示 ----------- //
+        if (countdownUI != null)
+            countdownUI.SetActive(false);
 
-        // カウントダウン UI を消したい場合はコメント解除
-        // if (countdownUI != null)
-        //     countdownUI.SetActive(false);
+        // ----------- ★操作停止（ゲームオーバー） ----------- //
+        PauseGameControls();
+
+        // ----------- カーソル表示 ----------- //
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        isRunning = false;
+    }
+
+    /// <summary>
+    /// ★ MouseLook, PlayerMovement, PauseMenu を無効化する（あなたの提示した処理に合わせた）
+    /// </summary>
+    private void PauseGameControls()
+    {
+        // MouseLook 停止
+        var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
+        foreach (var ml in allMouseLooks)
+        {
+            ml.isPaused = true;
+        }
+
+        // PlayerMovement 停止
+        var playerMove = FindFirstObjectByType<PlayerMovement>();
+        if (playerMove != null)
+        {
+            playerMove.enabled = false;
+        }
+
+        // PauseMenu (ESC メニュー) 停止
+        var pauseMenu = FindFirstObjectByType<PauseMenu>();
+        if (pauseMenu != null)
+        {
+            pauseMenu.enabled = false;
+        }
     }
 
     private void OnClickReturnTitle()
     {
+        // ESC メニューを戻す必要があればここで解除しても良い
         SceneManager.LoadScene("TitleScene");
     }
 }

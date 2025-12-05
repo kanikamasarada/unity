@@ -8,11 +8,13 @@ TagManager:
   - Item
   - NPC
   - "\uFF1F"
+  - Wall
+  - Yuka
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Yuka
   - Water
   - UI
   - 
