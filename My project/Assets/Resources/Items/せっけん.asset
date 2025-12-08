@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
   m_Name: "\u305B\u3063\u3051\u3093"
   m_EditorClassIdentifier: 
-  itemName: "\u305B\u3063\u3051\u3093"
-  icon: {fileID: 0}
-  description: 
-  worldPrefab: {fileID: 0}
+  itemName: "\u77F3\u9E7C"
+  icon: {fileID: 21300000, guid: 8bb14d85ae862ff449785b09cbc2165d, type: 3}
+  lightRange: 4
+  lightIntensity: 2
+  flamePrefab: {fileID: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  description: "\u77F3\u9E78"
+  worldPrefab: {fileID: 4871006832450258387, guid: 5583aa560bf394f42943a4bf47a812af, type: 3}
   worldRotationOffset: {x: 0.5, y: -3, z: 1}
   worldPositionOffset: {x: 0, y: 0, z: 0}
   worldScale: {x: 1, y: 1, z: 1}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1234798096001575118}
   - component: {fileID: 5641719897523275393}
   m_Layer: 0
-  m_Name: "\u305B\u3063\u3051\u3093"
+  m_Name: "\u305B\u3063\u3051\u3093.Assets"
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

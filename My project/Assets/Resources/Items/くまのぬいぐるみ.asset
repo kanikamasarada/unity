@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd94297348057d4c97f7ac3f7840190, type: 3}
   m_Name: "\u304F\u307E\u306E\u306C\u3044\u3050\u308B\u307F"
   m_EditorClassIdentifier: 
-  itemName: "\u304F\u307E\u306E\u306C\u3044\u3050\u308B\u307F"
+  itemName: "\u30AF\u30DE\u306E\u4EBA\u5F62"
   icon: {fileID: 21300000, guid: d09c3f61ddc6e7d42a083c6df2bc2644, type: 3}
   lightRange: 2
   lightIntensity: 2
   flamePrefab: {fileID: 0}
   lightColor: {r: 1, g: 1, b: 1, a: 1}
-  description: 
+  description: "\u30AF\u30DE\u306E\u4EBA\u5F62"
   worldPrefab: {fileID: 919132149155446097, guid: 599fb4391311c0d44a6f83182ecd9066, type: 3}
   worldRotationOffset: {x: 0.5, y: -3, z: 1}
   worldPositionOffset: {x: 0, y: 0, z: 0}

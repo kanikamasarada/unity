@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "\u30CF\u30B5\u30DF"
   icon: {fileID: 21300000, guid: 5a2d06a319b3ce44ebbe33fca56438b2, type: 3}
-  description: "\u304F\u307E\u3092\u5207\u308A\u305F\u3044"
+  lightRange: 4
+  lightIntensity: 2
+  flamePrefab: {fileID: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  description: "\u30CF\u30B5\u30DF"
   worldPrefab: {fileID: 919132149155446097, guid: 13275f19212077e468c14c4587c1b852, type: 3}
   worldRotationOffset: {x: 0.5, y: -3, z: 1}
   worldPositionOffset: {x: 0, y: 0, z: 0}

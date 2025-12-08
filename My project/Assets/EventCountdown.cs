@@ -131,17 +131,17 @@ public class EventCountdown : MonoBehaviour
     private void PauseGameControls()
     {
         // MouseLook í‚é~
-        var allMouseLooks = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
-        foreach (var ml in allMouseLooks)
+        var MouseLook = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
+        foreach (var ml in MouseLook)
         {
-            ml.isPaused = true;
+            ml.enabled = false;
         }
 
         // PlayerMovement í‚é~
-        var playerMove = FindFirstObjectByType<PlayerMovement>();
-        if (playerMove != null)
+        var PlayerMovement = FindFirstObjectByType<PlayerMovement>();
+        if (PlayerMovement != null)
         {
-            playerMove.enabled = false;
+            PlayerMovement.enabled = false;
         }
 
         // PauseMenu (ESC ÉÅÉjÉÖÅ[) í‚é~
@@ -149,6 +149,18 @@ public class EventCountdown : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.enabled = false;
+        }
+
+        var InventoryManager = FindFirstObjectByType<InventoryManager>();
+        if (InventoryManager != null)
+        {
+            InventoryManager.enabled = false;
+        }
+
+        var InventoryUI = FindFirstObjectByType<InventoryUI>();
+        if (InventoryUI != null)
+        {
+            InventoryUI.enabled = false;
         }
     }
 

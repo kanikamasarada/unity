@@ -11825,7 +11825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 142fb7b615ee9594084e776e0e4dd04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 30
+  countdownTime: 10
   countdownUI: {fileID: 162162570}
   countdownText: {fileID: 162162571}
   finishPanel: {fileID: 266879110}
@@ -17616,6 +17616,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826948057}
   m_Mesh: {fileID: 2591943981575976877, guid: e269ba9c8e68fc947861d5f8c9887f49, type: 3}
+--- !u!1 &827834371 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+  m_PrefabInstance: {fileID: 986742334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &827834373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827834371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e50808f50f96334c8d4b4f97ef73ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 0}
+  changes: []
+  enableInteract: 1
+  destroyTarget: {fileID: 827834371}
+  spawnPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  requiredItems:
+  - {fileID: 11400000, guid: a8eaca54962973d47a63b01a0a15194f, type: 2}
+  interactDistance: 2
+--- !u!65 &827834374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827834371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2058113, y: 4.025209, z: 2.9437366}
+  m_Center: {x: 0.6029206, y: 1.512605, z: -0.30563235}
+--- !u!114 &827834375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827834371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5354ee963e3e9f041bff8ff9edd9037e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onInteractAfter:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissingItem:
+    m_PersistentCalls:
+      m_Calls: []
+  requiredItems:
+  - {fileID: 11400000, guid: a8d3b5cfcc4836843a3f159bdf349740, type: 2}
+  consumeItems:
+  - {fileID: 11400000, guid: a8d3b5cfcc4836843a3f159bdf349740, type: 2}
+  rewardItems:
+  - {fileID: 11400000, guid: a8eaca54962973d47a63b01a0a15194f, type: 2}
+  interactDistance: 2
 --- !u!1 &838051229
 GameObject:
   m_ObjectHideFlags: 0
@@ -19877,7 +19952,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 827834374}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 827834373}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 827834375}
   m_SourcePrefab: {fileID: 100100000, guid: 89ede9256fbfe8d70b1fdbe58d46b263, type: 3}
 --- !u!1 &991451068
 GameObject:
@@ -32090,7 +32174,7 @@ MonoBehaviour:
     distanceTexture: {fileID: 0}
     distanceRange: 0
   - day: 2
-    newPosition: {x: 200, y: 200, z: 200}
+    newPosition: {x: -7.714, y: 3.182, z: 30.218}
     active: 1
     newTexture: {fileID: 0}
     distanceTexture: {fileID: 0}
