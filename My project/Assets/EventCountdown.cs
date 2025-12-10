@@ -11,7 +11,7 @@ public class EventCountdown : MonoBehaviour
     [Header("UI 要素")]
     public GameObject countdownUI;
     public Text countdownText;
-    public GameObject finishPanel;  // ← これを 0 の時に表示する
+    public GameObject finishPanel;
     public Button toTitleButton;
 
     [Header("サウンド")]
@@ -53,6 +53,16 @@ public class EventCountdown : MonoBehaviour
 
     public void StartCountdown()
     {
+        // ★ ドア全ロック
+        var doors = FindObjectsByType<SlideDoor>(FindObjectsSortMode.None);
+        foreach (var d in doors)
+        {
+            d.isLocked = true;
+        }
+
+        // ★ 敵に落下命令を送る
+        TriggerEnemiesFall();
+
         timer = countdownTime;
         isRunning = true;
         isFinished = false;
@@ -107,66 +117,56 @@ public class EventCountdown : MonoBehaviour
         if (finishSE != null && audioSource != null)
             audioSource.PlayOneShot(finishSE);
 
-        // ----------- パネル表示 ----------- //
         if (finishPanel != null)
             finishPanel.SetActive(true);
 
-        // ----------- カウントダウン UI を非表示 ----------- //
         if (countdownUI != null)
             countdownUI.SetActive(false);
 
-        // ----------- ★操作停止（ゲームオーバー） ----------- //
         PauseGameControls();
 
-        // ----------- カーソル表示 ----------- //
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         isRunning = false;
     }
 
-    /// <summary>
-    /// ★ MouseLook, PlayerMovement, PauseMenu を無効化する（あなたの提示した処理に合わせた）
-    /// </summary>
     private void PauseGameControls()
     {
-        // MouseLook 停止
         var MouseLook = FindObjectsByType<MouseLook>(FindObjectsSortMode.None);
         foreach (var ml in MouseLook)
-        {
             ml.enabled = false;
-        }
 
-        // PlayerMovement 停止
         var PlayerMovement = FindFirstObjectByType<PlayerMovement>();
         if (PlayerMovement != null)
-        {
             PlayerMovement.enabled = false;
-        }
 
-        // PauseMenu (ESC メニュー) 停止
         var pauseMenu = FindFirstObjectByType<PauseMenu>();
         if (pauseMenu != null)
-        {
             pauseMenu.enabled = false;
-        }
 
         var InventoryManager = FindFirstObjectByType<InventoryManager>();
         if (InventoryManager != null)
-        {
             InventoryManager.enabled = false;
-        }
 
         var InventoryUI = FindFirstObjectByType<InventoryUI>();
         if (InventoryUI != null)
-        {
             InventoryUI.enabled = false;
-        }
     }
 
     private void OnClickReturnTitle()
     {
-        // ESC メニューを戻す必要があればここで解除しても良い
         SceneManager.LoadScene("TitleScene");
+    }
+
+    // ★ 敵全員に落下命令
+    private void TriggerEnemiesFall()
+    {
+        var enemies = FindObjectsByType<EnemyDropFollow>(FindObjectsSortMode.None);
+
+        foreach (var enemy in enemies)
+        {
+            
+        }
     }
 }

@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\eventcountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\oto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\oto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\assetspausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\assetspausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\objectdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\objectdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\slidedoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\slidedoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +49,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\inventorydraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\inventorydraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\otosu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\NPC\u7BA1\u7406\\otosu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +70,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "AssetsPauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAABFwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:50:39.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ObjectDestroyer.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\ObjectDestroyer.cs",
+              "RelativeDocumentMoniker": "Assets\\ObjectDestroyer.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\ObjectDestroyer.cs",
+              "RelativeToolTip": "Assets\\ObjectDestroyer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:24:17.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SlideDoor.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\SlideDoor.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\SlideDoor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:04:00.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "DateObjectBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
               "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
               "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAowKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T02:40:10.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T02:40:10.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "InventoryUi.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryUi.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryUi.cs",
@@ -63,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "InventoryDragHandler.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryDragHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryDragHandler.cs",
@@ -75,7 +142,77 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventCountdown.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
+              "RelativeDocumentMoniker": "Assets\\EventCountdown.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
+              "RelativeToolTip": "Assets\\EventCountdown.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAgwKgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T05:32:45.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemyFallChase.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T03:04:05.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemPickUp.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemPickUp.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\ItemPickUp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T02:37:52.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "otosu.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\otosu.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\otosu.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\otosu.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\otosu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T02:43:47.194Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "HorrorFollower.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T02:44:39.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "oto.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\oto.cs",
+              "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\oto.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\oto.cs",
+              "RelativeToolTip": "Assets\\NPC\u7BA1\u7406\\oto.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T02:49:48.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryManager.cs",
@@ -84,19 +221,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-08T01:44:31.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventCountdown.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
-              "RelativeDocumentMoniker": "Assets\\EventCountdown.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
-              "RelativeToolTip": "Assets\\EventCountdown.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAArwJwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T05:32:45.069Z",
-              "EditorCaption": ""
             }
           ]
         }
