@@ -1,3 +1,4 @@
+using UnityEditorInternal.VersionControl;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleCrouch()
     {
         // :太字のプラス記号: スペースを押している間だけしゃがむ
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftControl))
             isCrouching = true;
         else
             isCrouching = false;

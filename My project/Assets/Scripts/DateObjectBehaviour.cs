@@ -4,6 +4,7 @@ public class DateObjectBehaviour : MonoBehaviour
 {
     public Renderer targetRenderer;
     public DayChangeData[] changes;
+    public AudioSource breakAudio;
 
     private DayChangeData currentData;
     private Transform player;
@@ -144,6 +145,7 @@ public class DateObjectBehaviour : MonoBehaviour
         // --- ターゲット消去（必ず実行）---
         if (destroyTarget != null)
         {
+            breakAudio.Play();
             Destroy(destroyTarget);
             Debug.Log("指定オブジェクトを消去: " + destroyTarget.name);
         }

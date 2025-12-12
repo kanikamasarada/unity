@@ -5,6 +5,7 @@ public class PlayerInteract : MonoBehaviour
     public float interactRange = 3f; // ← 前は1fとかなら広げる
     public LayerMask itemLayer;
     public Camera playerCamera;
+    public AudioSource get_audio;
 
     private void Update()
     {
@@ -22,6 +23,7 @@ public class PlayerInteract : MonoBehaviour
             var itemPickup = hit.collider.GetComponent<ItemPickUp>();
             if (itemPickup != null)
             {
+                get_audio.Play();
                 itemPickup.PickUp();
             }
         }

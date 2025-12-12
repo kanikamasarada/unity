@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\07011\\unity\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\07011\\unity\\my project\\assets\\player\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\playerinteract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\puzzlecontrollercheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\puzzlecontrollercheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\objectdestroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dateobjectbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\07011\\unity\\My project\\assets\\inventoty\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\inventoty\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,44 +98,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PuzzleControllerCheck.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
-              "RelativeDocumentMoniker": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
-              "RelativeToolTip": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Player\\PlayerMovement.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAzwDMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T02:55:19.27Z",
+              "WhenOpened": "2025-12-12T00:47:26.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "game.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\game.cs",
-              "RelativeDocumentMoniker": "Assets\\game.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\game.cs",
-              "RelativeToolTip": "Assets\\game.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwCgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PlayerInteract.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerInteract.cs",
+              "RelativeDocumentMoniker": "Assets\\Player\\PlayerInteract.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Player\\PlayerInteract.cs",
+              "RelativeToolTip": "Assets\\Player\\PlayerInteract.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T01:50:04.507Z"
+              "WhenOpened": "2025-12-12T00:43:44.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssetsPauseMenu.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Inventoty\\AssetsPauseMenu.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
-              "RelativeToolTip": "Assets\\Inventoty\\AssetsPauseMenu.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAABFwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T01:50:39.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ObjectDestroyer.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\ObjectDestroyer.cs",
               "RelativeDocumentMoniker": "Assets\\ObjectDestroyer.cs",
@@ -139,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "SlideDoor.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\SlideDoor.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\SlideDoor.cs",
@@ -151,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EventCountdown.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\EventCountdown.cs",
               "RelativeDocumentMoniker": "Assets\\EventCountdown.cs",
@@ -163,7 +160,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "DateObjectBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAcwJMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T02:40:10.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AssetsPauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "RelativeToolTip": "Assets\\Inventoty\\AssetsPauseMenu.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAABFwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:50:39.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "game.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\game.cs",
+              "RelativeDocumentMoniker": "Assets\\game.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\game.cs",
+              "RelativeToolTip": "Assets\\game.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T01:50:04.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PuzzleControllerCheck.cs",
+              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
+              "RelativeDocumentMoniker": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
+              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
+              "RelativeToolTip": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\PuzzleControllerCheck.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T02:55:19.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\\u91D1\u5EAB\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\\u91D1\u5EAB\\NewMonoBehaviourScript.cs",
@@ -174,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ShelfInteract.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\ShelfInteract.cs",
               "RelativeDocumentMoniker": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\ShelfInteract.cs",
@@ -186,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "NewMonoBehaviourScript.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\NewMonoBehaviourScript.cs",
               "RelativeDocumentMoniker": "Assets\\\u6249\u30D1\u30B9\u30EF\u30FC\u30C9\\NewMonoBehaviourScript.cs",
@@ -197,19 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DateObjectBehaviour.cs",
-              "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DateObjectBehaviour.cs",
-              "ToolTip": "C:\\Users\\07011\\unity\\My project\\Assets\\Scripts\\DateObjectBehaviour.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DateObjectBehaviour.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAowKAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T02:40:10.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "InventoryUi.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryUi.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryUi.cs",
@@ -221,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "InventoryDragHandler.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryDragHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryDragHandler.cs",
@@ -233,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "EnemyFallChase.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\EnemyFallChase.cs",
@@ -244,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ItemPickUp.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\ItemPickUp.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\ItemPickUp.cs",
@@ -256,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "otosu.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\otosu.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\otosu.cs",
@@ -268,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "HorrorFollower.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\HorrorFollower.cs",
@@ -279,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "oto.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\NPC\u7BA1\u7406\\oto.cs",
               "RelativeDocumentMoniker": "Assets\\NPC\u7BA1\u7406\\oto.cs",
@@ -290,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "C:\\Users\\07011\\unity\\My project\\Assets\\Inventoty\\InventoryManager.cs",
               "RelativeDocumentMoniker": "Assets\\Inventoty\\InventoryManager.cs",
